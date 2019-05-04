@@ -4,10 +4,10 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>实验五：ide集成环境下的开发调 · GitBook</title>
+        <title>实验五：Pychar 环境下Mciropython的开发配置 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="os.html" />
+    
     
     <link rel="prev" href="basic_develop_debug.html" />
     
@@ -85,6 +87,8 @@
 
     
         
+        <li class="header">目录</li>
+        
         
     
         <li class="chapter " data-level="1.1" data-path="./">
@@ -110,38 +114,6 @@
                 </a>
             
 
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.2.1" data-path="os.html">
-            
-                <a href="os.html">
-            
-                    
-                    操作系统
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.2" data-path="serial_driver.html">
-            
-                <a href="serial_driver.html">
-            
-                    
-                    串口驱动
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
             
         </li>
     
@@ -189,7 +161,79 @@
                 <a href="use_ide_to_dev_micropython_esp32.html">
             
                     
-                    实验五：ide集成环境下的开发调
+                    实验五：Pychar 环境下Mciropython的开发配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">参考</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="os.html">
+            
+                <a href="os.html">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="serial_driver.html">
+            
+                <a href="serial_driver.html">
+            
+                    
+                    串口驱动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="amby_usage.md">
+            
+                <span>
+            
+                    
+                    amby操作指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="rshell_usage.html">
+            
+                <a href="rshell_usage.html">
+            
+                    
+                    rshell操作指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="mpfshell_usage.html">
+            
+                <a href="mpfshell_usage.html">
+            
+                    
+                    mpfshell操作指南
             
                 </a>
             
@@ -227,7 +271,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >实验五：ide集成环境下的开发调</a>
+        <a href="." >实验五：Pychar 环境下Mciropython的开发配置</a>
     </h1>
 </div>
 
@@ -242,8 +286,84 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5B9E;&#x9A8C;&#x4E94;&#xFF1A;ide&#x96C6;&#x6210;&#x73AF;&#x5883;&#x4E0B;&#x7684;&#x5F00;&#x53D1;&#x8C03;">&#x5B9E;&#x9A8C;&#x4E94;&#xFF1A;ide&#x96C6;&#x6210;&#x73AF;&#x5883;&#x4E0B;&#x7684;&#x5F00;&#x53D1;&#x8C03;</h1>
-<h2 id=""> </h2>
+                                <h1 id="&#x5B9E;&#x9A8C;&#x4E94;&#xFF1A;pychar-&#x73AF;&#x5883;&#x4E0B;mciropython&#x7684;&#x5F00;&#x53D1;&#x914D;&#x7F6E;">&#x5B9E;&#x9A8C;&#x4E94;&#xFF1A;Pychar &#x73AF;&#x5883;&#x4E0B;Mciropython&#x7684;&#x5F00;&#x53D1;&#x914D;&#x7F6E;</h1>
+<p>PyCharm &#x662F; <a href="https://www.jetbrains.com/" target="_blank">JetBrains</a> &#x63A8;&#x51FA;&#x7684;&#x4E13;&#x4E1A;&#x7EA7; Python IDE&#x3002;Microduino &#x5373;&#x5C06;&#x63A8;&#x51FA;&#x652F;&#x6301; <a href="http://micropython.org/" target="_blank">Micropython</a> &#x7684; ESP32 &#x6838;&#x5FC3;&#xFF0C;&#x672C;&#x6587;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x5728;pycharm&#x4E0B;&#x914D;&#x7F6E;microPython&#x5F00;&#x53D1;&#x73AF;&#x5883;</p>
+<h2 id="&#x524D;&#x7F6E;&#x6761;&#x4EF6;">&#x524D;&#x7F6E;&#x6761;&#x4EF6;</h2>
+<h3 id="&#x786E;&#x8BA4;python&#x73AF;&#x5883;&#x4E3A;35-&#x4EE5;&#x4E0A;&#x7248;&#x672C;">&#x786E;&#x8BA4;Python&#x73AF;&#x5883;&#x4E3A;3.5 &#x4EE5;&#x4E0A;&#x7248;&#x672C;</h3>
+<pre><code class="lang-shell">python3 --version
+# &#x5982;&#x679C;&#x7248;&#x672C;&#x592A;&#x4F4E;&#xFF0C;&#x8BF7;&#x5347;&#x7EA7;&#x7248;&#x672C;
+sudo apt-get update
+sudo apt-get upgrade python3
+# &#x5982;&#x679C;&#x7CFB;&#x7EDF;&#x6CA1;&#x6709;&#x5B89;&#x88C5;python3&#xFF0C;&#x8BF7;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x64CD;&#x4F5C;&#x5B89;&#x88C5;
+sudo apt-get install python3
+</code></pre>
+<h3 id="&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;pycharm&#x4EE5;&#x53CA;micro-python&#x63D2;&#x4EF6;">&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;Pycharm&#x4EE5;&#x53CA;micro python&#x63D2;&#x4EF6;</h3>
+<p>Pycharm &#x6709;&#x5546;&#x4E1A;&#x7248;&#x672C;&#x4E5F;&#x6709;&#x793E;&#x533A;&#x7684;&#x5F00;&#x6E90;&#x7248;&#x672C;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x5F00;&#x6E90;&#x7684;&#x793E;&#x533A;&#x7248;&#x672C;&#xFF08;community&#xFF09;&#x3002;<a href="https://www.jetbrains.com/pycharm/download" target="_blank">&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#x5728;&#x6B64;</a></p>
+<p><img src="https://thumbsnap.com/i/M4mqReG5.jpg?0416" alt="&#x8BBE;&#x7F6E;"></p>
+<p>&#x8BBE;&#x7F6E;&#x5BF9;&#x8BDD;&#x6846;&#x88AB;&#x6253;&#x5F00;&#xFF0C;&#x70B9;&#x51FB;&#x201C;Plugins&#x201D;&#x7BA1;&#x7406;&#x63D2;&#x4EF6;&#x3002;&#x8981;&#x589E;&#x52A0;&#x65B0;&#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x201C;Browse repositories&#x201D;&#x6309;&#x94AE;&#xFF0C;&#x6253;&#x5F00;&#x5728;&#x7EBF;&#x7684;&#x63D2;&#x4EF6;&#x5E93;&#x3002;&#x5728;&#x63D2;&#x4EF6;&#x5E93;&#x4E2D;&#x67E5;&#x627E;&#x540D;&#x4E3A;&#x201C;micropython&#x201D;&#x7684;&#x63D2;&#x4EF6;&#x3002;&#x7136;&#x540E;&#x5B89;&#x88C5;&#x3002;</p>
+<p><img src="https://microduino-new.oss-cn-beijing.aliyuncs.com/upload/f4e/ba0/28c/583/63e/0f9/20b/f39/f4e6b.jpg?x-oss-process=image/resize,m_lfit,limit_1,w_700/auto-orient,0/quality,Q_80" alt="&#x5B89;&#x88C5;micropython&#x63D2;&#x4EF6;"></p>
+<p>&#x5B89;&#x88C5;&#x5B8C;&#x63D2;&#x4EF6;&#x540E;&#xFF0C;&#x9700;&#x8981;&#x91CD;&#x542F; Pycharm &#x751F;&#x6548;&#x3002;</p>
+<h2 id="&#x521B;&#x5EFA;micropython&#x9879;&#x76EE;">&#x521B;&#x5EFA;micropython&#x9879;&#x76EE;</h2>
+<h3 id="&#x914D;&#x7F6E;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x7684;python&#x7248;&#x672C;">&#x914D;&#x7F6E;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x7684;python&#x7248;&#x672C;</h3>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A; Pure Python &#x7684;&#x9879;&#x76EE;&#x53D6;&#x540D;&#x4E3A;&#x201C;esp32&#x201D;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;&#x6B64; PyCharm &#x9879;&#x76EE;&#x6240;&#x4F7F;&#x7528;&#x7684; Python &#x7248;&#x672C;&#x4ECE;&#x7F3A;&#x7701;&#x7684; Python2 &#x6362;&#x6210; Python3&#x3002;&#x5728;&#x83DC;&#x5355;&#x4E2D;&#x9009;&#x62E9;&#x201C;Preference&#x201D;&#xFF0C;&#x7136;&#x540E;&#x9009;&#x62E9;&#x201C;Project:esp32 / Project Interpreter&#x201D;&#xFF0C;&#x7136;&#x540E;&#xFF0C;&#x5728; Project Interpreter &#x4E0B;&#x62C9;&#x6846;&#x4E2D;&#x9009;&#x62E9; &#x201C;Python 3.x&#x201D;&#x3002;</p>
+<p><img src="https://microduino-new.oss-cn-beijing.aliyuncs.com/upload/3c4/024/744/f99/c7c/9ca/552/428/3c440.jpg?x-oss-process=image/resize,m_lfit,limit_1,w_700/auto-orient,0/quality,Q_80" alt="&#x914D;&#x7F6E;&#x7CFB;&#x7EDF;python&#x73AF;&#x5883;"></p>
+<p>&#x5982;&#x679C;&#x4E0B;&#x62C9;&#x5217;&#x8868;&#x4E2D;&#x6CA1;&#x6709; Python3 &#x9009;&#x9879;&#xFF0C;&#x53EF;&#x4EE5;&#x70B9;&#x9009;&#x201C;Show All&#x201D;&#x6765;&#x589E;&#x52A0;&#xFF0C;&#x70B9;&#x6309;&#x5BF9;&#x8BDD;&#x6846;&#x5DE6;&#x4E0B;&#x89D2;&#x7684;&#x201C;+&#x201D;&#xFF0C;&#x9009;&#x62E9;&#x201C;Add Local...&#x201D;&#x3002;</p>
+<p><img src="https://microduino-new.oss-cn-beijing.aliyuncs.com/upload/284/bd8/e7e/fbf/63f/db8/8ad/249/2845b.jpg?x-oss-process=image/resize,m_lfit,limit_1,w_700/auto-orient,0/quality,Q_80" alt=""></p>
+<p>&#x9009;&#x62E9;&#x201C;System Interpretor&#x201D;&#x6807;&#x7B7E;&#xFF0C;&#x7136;&#x540E;&#x9009;&#x62E9; Python 3</p>
+<p><img src="https:////microduino-new.oss-cn-beijing.aliyuncs.com/upload/3f7/f94/32e/d80/36f/4dd/262/942/3f72f.jpg" alt="img"></p>
+<p>&#x6700;&#x540E;&#xFF0C;&#x9700;&#x8981;&#x5B89;&#x88C5;micropython&#x9700;&#x8981;&#x7684;&#x4F9D;&#x8D56;&#x5305;</p>
+<p><img src="https://microduino-new.oss-cn-beijing.aliyuncs.com/upload/3cf/0cd/626/ef8/7d0/5eb/84c/f81/3cf60.jpg?x-oss-process=image/resize,m_lfit,limit_1,w_700/auto-orient,0/quality,Q_80" alt="&#x4F9D;&#x8D56;&#x5305;"></p>
+<p>&#x4F9D;&#x6B21;&#x4E3A;&#xFF1A;</p>
+<ul>
+<li>adafruit-ampy</li>
+<li>docopt</li>
+<li>esptools</li>
+<li>pip </li>
+<li>pylint</li>
+<li>pyserial</li>
+<li>setuptools</li>
+</ul>
+<h3 id="&#x914D;&#x7F6E;micropython">&#x914D;&#x7F6E;micropython</h3>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x7EE7;&#x7EED;&#x5728;&#x201C;Preference&#x201D;&#x7A97;&#x53E3;&#x4E2D;&#x5BF9;Micropython&#x63D2;&#x4EF6;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#x3002;&#x9009;&#x62E9;&#x201C;Language &amp; Frameworks&#x201D;&#xFF0C;&#x201C;MicroPython&#x201D;&#x3002;&#x7136;&#x540E;&#x9009;&#x4E2D; &#x201C;Enable MicroPython Support&#x201D;&#xFF0C;&#x7136;&#x540E;&#x9009;&#x62E9;&#x201C;ESP8266&#x201D;&#xFF08;&#x6CA1;&#x9519;&#xFF0C;&#x6682;&#x65F6;&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x4E0D;&#x5B8C;&#x5168;&#x652F;&#x6301; ESP32&#xFF0C;&#x6240;&#x4EE5;&#x9009;&#x62E9;&#x8FD9;&#x4E2A; ESP8266&#xFF09;&#xFF0C;&#x5728; &#x201C;Device path&#x201D; &#x4E2D;&#x8F93;&#x5165;&#x4F60;&#x7684; ESP32 &#x4E32;&#x53E3;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;&#x201C;/dev/cu.SLAB_USBtoUART&#x201D;&#xFF0C;&#x8F93;&#x5165;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x6309;&#x4E00;&#x4E0B;&#x201C;Detect&#x201D;&#x6309;&#x94AE;&#x68C0;&#x67E5;&#x786E;&#x8BA4;&#x4E00;&#x4E0B;&#x3002;Windows &#x7248;&#x672C; PyCharm &#x76F4;&#x63A5;&#x5728; Device Path &#x4E2D; &#x8F93;&#x5165;&#x4E32;&#x53E3;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x5982;&#x201C;COM6&#x201D;&#xFF0C;&#x7136;&#x540E;&#x6309; &#x201C;Detect&#x201D;&#x6309;&#x94AE;&#x68C0;&#x67E5;&#x786E;&#x8BA4;&#x4E00;&#x4E0B;&#x3002;</p>
+<p><img src="https://microduino-new.oss-cn-beijing.aliyuncs.com/upload/af8/ec5/b8c/60b/d38/9b0/5ba/c61/af8ce.jpg?x-oss-process=image/resize,m_lfit,limit_1,w_700/auto-orient,0/quality,Q_80" alt=""></p>
+<p>&#x8BBE;&#x7F6E;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;&#x60A8;&#x5E94;&#x8BE5;&#x80FD;&#x591F;&#x5728;&#x201C;Tools&#x201D;&#x83DC;&#x5355;&#x4E2D;&#x770B;&#x5230; &#x201C;MicroPython&#x201D; &#x9009;&#x9879;&#x3002;&#x5982;&#x679C;&#x770B;&#x4E0D;&#x89C1;&#xFF0C;&#x8BF7;&#x91CD;&#x542F;&#x4E00;&#x4E0B; PyCharm&#x3002;</p>
+<p><img src="https://microduino-new.oss-cn-beijing.aliyuncs.com/upload/c35/4dd/300/7c8/973/ba4/b71/3d6/c3514.jpg?x-oss-process=image/resize,m_lfit,limit_1,w_700/auto-orient,0/quality,Q_80" alt=""></p>
+<h2 id="&#x4EE3;&#x7801;&#x7F16;&#x5199;">&#x4EE3;&#x7801;&#x7F16;&#x5199;</h2>
+<p>&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#xFF0C;&#x5E76;&#x65B0;&#x5EFA;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;Pycharm&#x7684;&#x81EA;&#x52A8;&#x8865;&#x9F50;&#x662F;&#x76EE;&#x524D;MICROPYTHON&#x7684;IDE&#x91CC;&#x9762;&#x505A;&#x7684;&#x6700;&#x597D;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;pycharm&#x4F5C;&#x4E3A;&#x4EE3;&#x7801;&#x7F16;&#x8F91;&#x5668;&#x3002;</p>
+<h2 id="&#x8FDB;&#x5165;repl">&#x8FDB;&#x5165;REPL</h2>
+<p>pycharm&#x540C;&#x6837;&#x53EF;&#x4EE5;&#x8FDB;&#x5165;&#x5230;repl&#x6A21;&#x5F0F;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><img src="img/pycharm_micropython_repl.png" alt="pycharm MicroPython REPL"></p>
+<p>&#x5F53;&#x6267;&#x884C;&#x5B8C;&#x547D;&#x4EE4;&#x540E;&#x4F1A;&#x770B;&#x5230;&#x5982;&#x4E0B;&#x7684;repl&#x89E3;&#x91CA;&#x73AF;&#x5883;</p>
+<p><img src="img/pycharm_repl_interaction.png" alt="repL &#x73AF;&#x5883;"></p>
+<h2 id="&#x70E7;&#x5F55;&#x6587;&#x4EF6;&#x5230;&#x76EE;&#x6807;&#x7248;">&#x70E7;&#x5F55;&#x6587;&#x4EF6;&#x5230;&#x76EE;&#x6807;&#x7248;</h2>
+<p>&#x53EF;&#x4EE5;&#x70E7;&#x5F55;&#x5236;&#x5B9A;&#x6587;&#x4EF6;&#x5230;&#x76EE;&#x6807;&#x7248;&#xFF0C;&#x5728;&#x8981;&#x70E7;&#x5F55;&#x7684;&#x6587;&#x4EF6;&#x7F16;&#x8F91;&#x7A97;&#x53E3;&#x70B9;&#x51FB;&#x53F3;&#x952E;&#xFF0C;&#x5728;&#x4E0B;&#x62C9;&#x83DC;&#x5355;&#x4E0B;&#x70B9;&#x51FB;&quot;run flash xxx.py&quot;&#x64CD;&#x4F5C;&#x5982;&#x4E0B;&#x56FE;&#x3002;</p>
+<p><img src="img/pycharm_flash_file.png" alt="&#x70E7;&#x5F55;&#x6587;&#x4EF6;"></p>
+<h3 id="&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;">&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</h3>
+<p>&#x7531;&#x4E8E;&#x7528;&#x4E8E;micropython&#x7684;plug in&#x662F;&#x9488;&#x5BF9;esp2866&#x5F00;&#x53D1;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x5BF9;esp32&#x7684;&#x652F;&#x6301;&#x4ECD;&#x7136;&#x6709;bug&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x4E3A;&#x4E86;&#x5404;&#x53D6;&#x6240;&#x957F;&#xFF0C;&#x91C7;&#x7528;&#x4E86;&#x6298;&#x4E2D;&#x7684;&#x5F00;&#x53D1;&#x914D;&#x7F6E;&#x65B9;&#x6848;&#xFF0C;&#x5373;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x7F16;&#x8F91;&#x5668;</td>
+<td>Pycharm + micropython plugin</td>
+</tr>
+<tr>
+<td>Repl</td>
+<td>Rshell &#x6216;&#x8005; mpfshell, &#x63A8;&#x8350;&#x4F7F;&#x7528;rshell</td>
+</tr>
+<tr>
+<td>&#x6587;&#x4EF6;&#x70E7;&#x5F55;&#x7BA1;&#x7406;</td>
+<td>Rshell &#x6216;&#x8005; mpfshell, &#x63A8;&#x8350;&#x4F7F;&#x7528;rshell</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4E0B;&#x56FE;&#x4E3A;&#x7EFC;&#x5408;&#x4F7F;&#x7528;&#x7684;&#x6548;&#x679C;&#xFF1A;</p>
+<p><img src="img/pycharm_with_rshell.png" alt="use pycharm with rshell"></p>
 
                                 
                                 </section>
@@ -271,10 +391,14 @@
 
             
                 
-                <a href="basic_develop_debug.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 实验四：基础开发调试">
+                <a href="basic_develop_debug.html" class="navigation navigation-prev " aria-label="Previous page: 实验四：基础开发调试">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="os.html" class="navigation navigation-next " aria-label="Next page: 操作系统">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -283,7 +407,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"实验五：ide集成环境下的开发调","level":"1.6","depth":1,"previous":{"title":"实验四：基础开发调试","level":"1.5","depth":1,"path":"basic_develop_debug.md","ref":"basic_develop_debug.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"use_ide_to_dev_micropython_esp32.md","mtime":"2019-05-02T03:57:55.483Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-05-02T05:24:36.930Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"实验五：Pychar 环境下Mciropython的开发配置","level":"1.6","depth":1,"next":{"title":"操作系统","level":"2.1","depth":1,"path":"os.md","ref":"os.md","articles":[]},"previous":{"title":"实验四：基础开发调试","level":"1.5","depth":1,"path":"basic_develop_debug.md","ref":"basic_develop_debug.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"use_ide_to_dev_micropython_esp32.md","mtime":"2019-05-04T11:08:32.832Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-04T11:11:37.046Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
