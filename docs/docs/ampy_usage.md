@@ -101,7 +101,3 @@ echo "export AMPY_PORT='/dev/ttyUSB0'" >> ~/.bashrc
 echo "export AMPY_PORT='/dev/u.SLAB_USBtoUART'" >> ~/.bash_profile
 ```
 
-## 参考
-
-https://github.com/pycampers/ampy
-
