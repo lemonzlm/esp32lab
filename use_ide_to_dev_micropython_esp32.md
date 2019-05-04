@@ -1,6 +1,4 @@
-# 实验五：ide集成环境下的开发调
-
-# Pychar 环境下Mciropython的开发配置 
+# 实验五：Pychar 环境下Mciropython的开发配置 
 
 PyCharm 是 [JetBrains](https://www.jetbrains.com/) 推出的专业级 Python IDE。Microduino 即将推出支持 [Micropython](http://micropython.org/) 的 ESP32 核心，本文介绍如何在pycharm下配置microPython开发环境
 
@@ -73,3 +71,36 @@ Pycharm 有商业版本也有社区的开源版本，这里我们使用开源的
 
 
 
+## 代码编写
+
+新建一个项目，并新建文件，可以看到Pycharm的自动补齐是目前MICROPYTHON的IDE里面做的最好的，因此，强烈建议使用pycharm作为代码编辑器。
+
+## 进入REPL
+
+pycharm同样可以进入到repl模式，如下图：
+
+![pycharm MicroPython REPL](img/pycharm_micropython_repl.png)
+
+当执行完命令后会看到如下的repl解释环境
+
+![repL 环境](img/pycharm_repl_interaction.png)
+
+## 烧录文件到目标版
+
+可以烧录制定文件到目标版，在要烧录的文件编辑窗口点击右键，在下拉菜单下点击"run flash xxx.py"操作如下图。
+
+![烧录文件](img/pycharm_flash_file.png)
+
+### 实际使用方法
+
+由于用于micropython的plug in是针对esp2866开发的，因此对esp32的支持仍然有bug，因此我们为了各取所长，采用了折中的开发配置方案，即：
+
+|              |                                      |
+| ------------ | ------------------------------------ |
+| 编辑器       | Pycharm + micropython plugin         |
+| Repl         | Rshell 或者 mpfshell, 推荐使用rshell |
+| 文件烧录管理 | Rshell 或者 mpfshell, 推荐使用rshell |
+
+下图为综合使用的效果：
+
+![use pycharm with rshell](img/pycharm_with_rshell.png)
