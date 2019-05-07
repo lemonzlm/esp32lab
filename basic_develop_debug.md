@@ -18,7 +18,7 @@
 
 常见的适用于micropython的代码管理工具
 
-- [Ampy](amby.md)
+- [Ampy](ampy_usage.md)
 - [Rshell](rshell_usage.md)
 - [mpfshell](mpfshell_usage.md)
 
