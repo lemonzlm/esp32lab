@@ -1,4 +1,4 @@
-# 实验五：Pychar 环境下Mciropython的开发配置 
+# Pychar 环境下Mciropython的开发配置 
 
 PyCharm 是 [JetBrains](https://www.jetbrains.com/) 推出的专业级 Python IDE。Microduino 即将推出支持 [Micropython](http://micropython.org/) 的 ESP32 核心，本文介绍如何在pycharm下配置microPython开发环境
 
