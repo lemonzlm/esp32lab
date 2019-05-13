@@ -8,7 +8,9 @@ NodeMCU-32S 开发板左右各19个引脚，共38个，下图为NodeMCU-32S的�
 
 ------
 
-![](img/nodemcu_32s_pin.png)
+
+
+![引脚说明](img/nodemcu_32s_pin.png)
 
 ## 引脚类型以及功能
 
