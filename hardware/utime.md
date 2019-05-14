@@ -51,4 +51,4 @@ for i in range(10):
 
 将上述代码以函数形式保存到另一个文件，然后在main.py中调用执行：
 
-![](img/esp32_utime_sleep.png)
+![](../img/esp32_utime_sleep.png)

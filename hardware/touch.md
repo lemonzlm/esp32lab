@@ -8,7 +8,7 @@ ESP32自带了一些可用的触摸传感器。本节教程为大家介绍这些
 
 ESP32 提供了多达 10 个电容式传感 GPIO，**能够探测由手指或其他物品直接接触或接近而产生的电容差异。**
 
-![img](http://src.1zlab.com/micropython-esp32/pins-and-gpio/rtc-gpio.png)
+![img](../img/rtc-gpio.png)
 
 上图中的紫色标记，即为具备触摸式传感器功能的GPIO引脚。
 

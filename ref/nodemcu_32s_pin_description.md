@@ -4,13 +4,13 @@
 
 NodeMCU-32S 开发板左右各19个引脚，共38个，下图为NodeMCU-32S的各个引脚的详细标注。
 
-![img](http://src.1zlab.com/micropython-esp32/pins-and-gpio/rtc-gpio.png)
+![img](../img/rtc-gpio.png)
 
 ------
 
 
 
-![引脚说明](img/nodemcu_32s_pin.png)
+![引脚说明](../img/nodemcu_32s_pin.png)
 
 ## 引脚类型以及功能
 
@@ -37,7 +37,7 @@ GPIO是General-purpose input/output的缩写，意思为通用型输入或输出
 >
 > 接下来的教程中我们所说的 GPIO+编号 = NodeMCU-32S开发板背面印刷的 P+编号
 
-![img](http://src.1zlab.com/micropython-esp32/pins-and-gpio/nodemcu-32s-pins.png)
+![img](../img/nodemcu-32s-pins.png)
 
 #### 未被引出的引脚编号
 

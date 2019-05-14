@@ -14,7 +14,7 @@ PWM的全称为Pulse Width Modulation，翻译成中文是脉冲宽度调节，�
 
 我们可以调节一个周期内，LED亮与灭的比例， 通过调节比例，就可以达到控制LED亮度的目的。在一个周期内，高电平时间占总体周期的比例，称之为**占空比 （duty）**。
 
-![pwm](http://src.1zlab.com/micropython-esp32/default/pwm-control-and-breath-led/pwm.jpg)
+![pwm](../img/pwm.png)
 
 例如PWM的控制周期为100ms，其中20ms为高电平，80ms为低电平，则占空比就是 20/100 = 20%。
 

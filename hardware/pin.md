@@ -153,7 +153,7 @@ Pin(2)
 >>> touch.irq(trigger=Pin.IRQ_FALLING, handler=lambda t:print("IRQ triggered by your finger"))
 ```
 
-![img](http://src.1zlab.com/micropython-esp32/pin/touch-irq.png)
+![img](../img/touch-irq.png)
 
 > #### 触摸传感器
 >
@@ -161,4 +161,4 @@ Pin(2)
 
 然后你便可以在REPL中看到：
 
-![](/Users/lemon/Library/Mobile%20Documents/com~apple~CloudDocs/git/esp-lab/img/esp32_touch_test.png)
+![](../img/esp32_touch_test.png)
