@@ -225,7 +225,7 @@ ESP32 TCP Server
 """
 
 import socket
-from emp_wifi import Wifi
+import network
 
 port = 10000  #端口号
 listenSocket = None  #套接字
@@ -234,7 +234,13 @@ try:
     # 注意：线连接到WiFi网络！
     # 如果未连接到网络，以下是连接到网络的代码
     # Wifi.connect()
-    ip = Wifi.ifconfig()[0][0]   #获取IP地址
+    sta_if = network.WLAN(network.STA_IF); 
+    sta_if.active(True)
+    sta_if.scan()                             # Scan for available access points
+    sta_if.connect("lemon", "lemon@Zlm1018") # Connect to an AP
+    sta_if.isconnected()                      # Check for successful connection
+
+    ip = sta_if.ifconfig()[0]   #获取IP地址
     listenSocket = socket.socket()   #创建套接字
     listenSocket.bind((ip, port))   #绑定地址和端口号
     listenSocket.listen(1)   #监听套接字, 最多允许一个连接
@@ -265,21 +271,29 @@ except:
 # -*- coding: UTF-8 -*-
 # PC TCP Client
 
-import socket               # 导入 socket 模块
+import socket               								# 导入 socket 模块
 
-s = socket.socket()         # 创建 socket 对象
-host = '192.168.2.231'      # esp32 ip
-port = 10000                # 设置端口号
+s = socket.socket()         								# 创建 socket 对象
+host = '<ip of your esp32 tcp server>'      # esp32 ip
+port = 10000                								# 设置端口号
 
 s.connect((host, port))
 
 if __name__ == '__main__':
     while True:
-        msg = raw_input('>>> ')
+        msg = input('>>> ').encode()
         s.send(msg)
 ```
 
-![img](http://src.1zlab.com/micropython-esp32/sockets/tcp-server-client.png)
+### 操作流程
+
+1. 将TCP SERVER代码上传至ESP32开发板，并进入REPL模式
+2. 将TCP CLINET代码保存到本机，运行 
+3. 在>>>提示符后输入任意字符，观察server端是否接受并打印。
+
+下图为操作效果
+
+![](img/socket_communication.png)
 
 ## 收看星球大战字符动画
 
@@ -309,7 +323,9 @@ brew install telnet
 
 接下来，让我们建立一个TCP通信，在我们的REPL中观看星球大战。
 
-首先要导入套接字模块：
+将ESP32开发板通过WIFI连接到外网，具体请参见[wifi](wifi_network_connection.md)
+
+导入套接字模块：
 
 ```
 >>> import socket
