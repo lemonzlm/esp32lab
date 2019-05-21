@@ -237,7 +237,7 @@ try:
     sta_if = network.WLAN(network.STA_IF); 
     sta_if.active(True)
     sta_if.scan()                             # Scan for available access points
-    sta_if.connect("lemon", "lemon@Zlm1018") # Connect to an AP
+    sta_if.connect("SSID", "password") # Connect to an AP
     sta_if.isconnected()                      # Check for successful connection
 
     ip = sta_if.ifconfig()[0]   #获取IP地址
