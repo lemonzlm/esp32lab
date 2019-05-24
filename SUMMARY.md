@@ -16,7 +16,7 @@
 * [串行总线](serial_line_control_esp32.md)
 * [WIFI网络实验](wifi_network_connection.md)
 * [Socket通信](socket_communication.md)
-* [通过HTTP远程上传DHT传感器数据](upload_dht11_data_via_http.md)
+* [检测DHT传感器数据并通过TCP上传](upload_dht11_data_via_socket.md)
 * [MQTT-与oneNET平台交互](mqtt_interaction_with_onenet.md)
 * [MQTT-与自建MQTT SERVER交互](mqtt_interaction_with_Mosquitto.md)
 * [esp-idf开发基本过程](esp32_idf_dev_basic.md)
