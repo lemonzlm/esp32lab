@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "/Users/lemon/Library/Arduino15/packages/esp8266/tools/**",
+                "/Users/lemon/Library/Arduino15/packages/esp8266/hardware/esp8266/2.5.0/**"
+            ],
+            "forcedInclude": []
+        }
+    ]
+}

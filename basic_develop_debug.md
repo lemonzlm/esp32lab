@@ -28,7 +28,7 @@
 
 本手册在使用Python编程时建议使用pycharm进行代码编辑。pycharm因为是商业软件，不能直接使用，我们这里采用 pycharm community 版本，该版本免费开放，已经够我们实验使用，请前往[下载](https://www.jetbrains.com/pycharm/download/#section=linux)。
 
-![请注意下载community版本](img/Download PyCharm  Python IDE for Professional Developers by JetBrains.png)
+![请注意下载community版本](img/download_pycharm_ide_community.png)
 
 #### 配置编辑器
 
