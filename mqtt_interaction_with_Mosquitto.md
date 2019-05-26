@@ -200,15 +200,16 @@ Out[2]: 'This is a test message of paho clinet from publisher,1'
 
 之前的实验都是在Ubuntu的本机上测试的，下面就以ESP32为客户端，实现MQTT的基本发布和订阅流程。实验的角色安排如下：
 
-| Role      | Machine                                  |
-| --------- | ---------------------------------------- |
-| Broker    | 安装了Mosquitto的PC 机                   |
-| Subcriber | NodeMCU-32S                              |
-| Publisher | NodeMCU-32S，可以与Subcriber相同也可不同 |
+| Role      | Machine                          |
+| --------- | -------------------------------- |
+| Broker    | 安装了Mosquitto的PC 机           |
+| Subcriber | NodeMCU-32S，paho-mqtt，二者之一 |
+| Publisher | NodeMCU-32S，paho-mqtt，二者之一 |
 
 ------
 
-**确保所有参与的机器接入到网络，可以接入到同一LAN之内！**
+- **确保所有参与的机器接入到网络，可以接入到同一LAN之内！**
+- **同一个NodeMCU-32S，不能既是订阅者，又是发布者**
 
 ---
 
