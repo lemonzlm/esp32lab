@@ -4,10 +4,10 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>实验环境与实验工具操作 · GitBook</title>
+        <title>esp-idf开发基本过程 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="flash_firmware.html" />
+    <link rel="next" href="esp32_dev_with_arduino.html" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="mqtt_interaction_with_Mosquitto.html" />
     
 
     </head>
@@ -104,7 +104,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="prepare.html">
+        <li class="chapter " data-level="1.2" data-path="prepare.html">
             
                 <a href="prepare.html">
             
@@ -292,12 +292,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11" data-path="upload_dht11_data_via_socket.html">
+        <li class="chapter " data-level="1.11" data-path="upload_dht11_data_via_http.html">
             
-                <a href="upload_dht11_data_via_socket.html">
+                <a href="upload_dht11_data_via_http.html">
             
                     
-                    检测DHT传感器数据并通过socket上传
+                    通过HTTP远程上传DHT传感器数据
             
                 </a>
             
@@ -331,7 +331,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14" data-path="esp32_idf_dev_basic.html">
+        <li class="chapter active" data-level="1.14" data-path="esp32_idf_dev_basic.html">
             
                 <a href="esp32_idf_dev_basic.html">
             
@@ -384,20 +384,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.17.1" data-path="ref/hardware_list.html">
-            
-                <a href="ref/hardware_list.html">
-            
-                    
-                    硬件清单及购买参考
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.17.2" data-path="ref/os.html">
+        <li class="chapter " data-level="1.17.1" data-path="ref/os.html">
             
                 <a href="ref/os.html">
             
@@ -410,7 +397,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17.3" data-path="ref/serial_driver.html">
+        <li class="chapter " data-level="1.17.2" data-path="ref/serial_driver.html">
             
                 <a href="ref/serial_driver.html">
             
@@ -423,7 +410,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17.4" data-path="ref/ampy_usage.html">
+        <li class="chapter " data-level="1.17.3" data-path="ref/ampy_usage.html">
             
                 <a href="ref/ampy_usage.html">
             
@@ -436,7 +423,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17.5" data-path="ref/rshell_usage.html">
+        <li class="chapter " data-level="1.17.4" data-path="ref/rshell_usage.html">
             
                 <a href="ref/rshell_usage.html">
             
@@ -449,7 +436,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17.6" data-path="ref/mpfshell_usage.html">
+        <li class="chapter " data-level="1.17.5" data-path="ref/mpfshell_usage.html">
             
                 <a href="ref/mpfshell_usage.html">
             
@@ -462,25 +449,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17.7" data-path="ref/nodemcu_32s_pin_description.html">
+        <li class="chapter " data-level="1.17.6" data-path="ref/nodemcu_32s_pin_description.html">
             
                 <a href="ref/nodemcu_32s_pin_description.html">
             
                     
                     NodeMCU-32S引脚说明
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.17.8" data-path="ref/mqtt_introduction.html">
-            
-                <a href="ref/mqtt_introduction.html">
-            
-                    
-                    MQTT简介
             
                 </a>
             
@@ -523,7 +497,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >实验环境与实验工具操作</a>
+        <a href="." >esp-idf开发基本过程</a>
     </h1>
 </div>
 
@@ -538,11 +512,44 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="esp-&#x5B9E;&#x9A8C;&#x51C6;&#x5907;&#x5DE5;&#x4F5C;">ESP &#x5B9E;&#x9A8C;&#x51C6;&#x5907;&#x5DE5;&#x4F5C;</h1>
-<ol>
-<li><a href="os.md">&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;</a></li>
-<li><a href="seiral_driver.md">&#x4E32;&#x53E3;&#x9A71;&#x52A8;</a></li>
-</ol>
+                                <h1 id="esp-idf-&#x5F00;&#x53D1;&#x57FA;&#x672C;&#x8FC7;&#x7A0B;">ESP-IDF &#x5F00;&#x53D1;&#x57FA;&#x672C;&#x8FC7;&#x7A0B;</h1>
+<h2 id="&#x914D;&#x7F6E;esp-idf">&#x914D;&#x7F6E;ESP-IDF</h2>
+<h3 id="&#x83B7;&#x53D6;&#x5DE5;&#x5177;&#x94FE;&#x7684;&#x4F9D;&#x8D56;&#x5305;">&#x83B7;&#x53D6;&#x5DE5;&#x5177;&#x94FE;&#x7684;&#x4F9D;&#x8D56;&#x5305;</h3>
+<pre><code class="lang-shell"># for debian or ubuntu
+sudo apt-get install gcc git wget make libncurses-dev flex bison gperf python python-pip python-setuptools python-serial python-cryptography python-future python-pyparsing
+</code></pre>
+<h3 id="&#x83B7;&#x53D6;&#x5DE5;&#x5177;&#x94FE;">&#x83B7;&#x53D6;&#x5DE5;&#x5177;&#x94FE;</h3>
+<pre><code class="lang-shell"># dowload tool chain
+mkdir -p ~/esp32
+cd ~/esp32
+wget https://dl.espressif.com/dl/xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.tar.gz
+tar -xzf xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.tar.gz
+# setup evn
+echo &apos;export PATH=&quot;$HOME/esp32/xtensa-esp32-elf/bin:$PATH&quot;&apos; &gt;&gt; ~/.bashrc
+</code></pre>
+<h3 id="&#x83B7;&#x53D6;esp-idf">&#x83B7;&#x53D6;ESP-IDF</h3>
+<pre><code class="lang-shell">mkdir esp32
+cd esp32
+git clone --recursive https://github.com/espressif/esp-idf.git
+</code></pre>
+<h3 id="&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;">&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;</h3>
+<pre><code class="lang-shell">## for mac osx
+nano ~/.bash_profile
+## addlines to the file
+export IDF_PATH=~/esp32/esp-idf
+## for ubuntu or debian
+echo &apos;export IDF_PATH=$HOME/esp32/esp-idf&apos;&gt;&gt; ~/.bashrc
+</code></pre>
+<h3 id="&#x5B89;&#x88C5;python&#x8F6F;&#x4EF6;&#x5305;">&#x5B89;&#x88C5;Python&#x8F6F;&#x4EF6;&#x5305;</h3>
+<pre><code class="lang-shell"># esp &#x5DE5;&#x7A0B;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;python2
+python -m pip install --user -r $IDF_PATH/requirements.txt
+
+## &#x5BF9;&#x4E8E;python3
+pip3 install --upgrade pip
+python3 -m pip install --user -r $IDF_PATH/requirements.txt
+## &#x5BF9;&#x4E8E;&#x6709;&#x7684;&#x7CFB;&#x7EDF;&#xFF0C;&#x53EF;&#x80FD;&#x8981;&#x6DFB;&#x52A0;Python&#x5305;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;,&#x4EE5;&#x6211;&#x7684;&#x4E3A;&#x4F8B;&#x5B50;&#x3002;
+export PATH=/Users/lemon/Library/Python/3.6/bin
+</code></pre>
 
                                 
                                 </section>
@@ -570,12 +577,12 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 前言">
+                <a href="mqtt_interaction_with_Mosquitto.html" class="navigation navigation-prev " aria-label="Previous page: MQTT-与自建MQTT SERVER交互">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="flash_firmware.html" class="navigation navigation-next " aria-label="Next page: 烧录固件">
+                <a href="esp32_dev_with_arduino.html" class="navigation navigation-next " aria-label="Next page: Arduino下开发ESP32应用">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -586,7 +593,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"实验环境与实验工具操作","level":"1.2","depth":1,"next":{"title":"烧录固件","level":"1.3","depth":1,"path":"flash_firmware.md","ref":"flash_firmware.md","articles":[]},"previous":{"title":"前言","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"prepare.md","mtime":"2019-04-30T07:15:59.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-04-07T01:47:00.872Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"esp-idf开发基本过程","level":"1.14","depth":1,"next":{"title":"Arduino下开发ESP32应用","level":"1.15","depth":1,"path":"esp32_dev_with_arduino.md","ref":"esp32_dev_with_arduino.md","articles":[]},"previous":{"title":"MQTT-与自建MQTT SERVER交互","level":"1.13","depth":1,"path":"mqtt_interaction_with_Mosquitto.md","ref":"mqtt_interaction_with_Mosquitto.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"esp32_idf_dev_basic.md","mtime":"2019-05-13T05:52:31.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-21T05:12:54.205Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
