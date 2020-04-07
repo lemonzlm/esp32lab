@@ -4,10 +4,10 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>实验环境与实验工具操作 · GitBook</title>
+        <title>ESP32基本硬件控制 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="flash_firmware.html" />
+    <link rel="next" href="hardware/pin.html" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="use_ide_to_dev_micropython_esp32.html" />
     
 
     </head>
@@ -104,7 +104,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="prepare.html">
+        <li class="chapter " data-level="1.2" data-path="prepare.html">
             
                 <a href="prepare.html">
             
@@ -169,7 +169,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="esp32_basic_hardware_control.html">
+        <li class="chapter active" data-level="1.7" data-path="esp32_basic_hardware_control.html">
             
                 <a href="esp32_basic_hardware_control.html">
             
@@ -292,12 +292,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11" data-path="upload_dht11_data_via_socket.html">
+        <li class="chapter " data-level="1.11" data-path="upload_dht11_data_via_http.html">
             
-                <a href="upload_dht11_data_via_socket.html">
+                <a href="upload_dht11_data_via_http.html">
             
                     
-                    检测DHT传感器数据并通过socket上传
+                    通过HTTP远程上传DHT传感器数据
             
                 </a>
             
@@ -384,20 +384,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.17.1" data-path="ref/hardware_list.html">
-            
-                <a href="ref/hardware_list.html">
-            
-                    
-                    硬件清单及购买参考
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.17.2" data-path="ref/os.html">
+        <li class="chapter " data-level="1.17.1" data-path="ref/os.html">
             
                 <a href="ref/os.html">
             
@@ -410,7 +397,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17.3" data-path="ref/serial_driver.html">
+        <li class="chapter " data-level="1.17.2" data-path="ref/serial_driver.html">
             
                 <a href="ref/serial_driver.html">
             
@@ -423,7 +410,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17.4" data-path="ref/ampy_usage.html">
+        <li class="chapter " data-level="1.17.3" data-path="ref/ampy_usage.html">
             
                 <a href="ref/ampy_usage.html">
             
@@ -436,7 +423,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17.5" data-path="ref/rshell_usage.html">
+        <li class="chapter " data-level="1.17.4" data-path="ref/rshell_usage.html">
             
                 <a href="ref/rshell_usage.html">
             
@@ -449,7 +436,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17.6" data-path="ref/mpfshell_usage.html">
+        <li class="chapter " data-level="1.17.5" data-path="ref/mpfshell_usage.html">
             
                 <a href="ref/mpfshell_usage.html">
             
@@ -462,25 +449,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17.7" data-path="ref/nodemcu_32s_pin_description.html">
+        <li class="chapter " data-level="1.17.6" data-path="ref/nodemcu_32s_pin_description.html">
             
                 <a href="ref/nodemcu_32s_pin_description.html">
             
                     
                     NodeMCU-32S引脚说明
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.17.8" data-path="ref/mqtt_introduction.html">
-            
-                <a href="ref/mqtt_introduction.html">
-            
-                    
-                    MQTT简介
             
                 </a>
             
@@ -523,7 +497,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >实验环境与实验工具操作</a>
+        <a href="." >ESP32基本硬件控制</a>
     </h1>
 </div>
 
@@ -538,11 +512,16 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="esp-&#x5B9E;&#x9A8C;&#x51C6;&#x5907;&#x5DE5;&#x4F5C;">ESP &#x5B9E;&#x9A8C;&#x51C6;&#x5907;&#x5DE5;&#x4F5C;</h1>
-<ol>
-<li><a href="os.md">&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;</a></li>
-<li><a href="seiral_driver.md">&#x4E32;&#x53E3;&#x9A71;&#x52A8;</a></li>
-</ol>
+                                <h1 id="esp32&#x57FA;&#x672C;&#x786C;&#x4EF6;&#x63A7;&#x5236;">ESP32&#x57FA;&#x672C;&#x786C;&#x4EF6;&#x63A7;&#x5236;</h1>
+<h2 id="nodemcu-32s&#x7684;&#x786C;&#x4EF6;&#x5F15;&#x811A;&#x5B9A;&#x4E49;">NodeMCU-32S&#x7684;&#x786C;&#x4EF6;&#x5F15;&#x811A;&#x5B9A;&#x4E49;</h2>
+<p>NodeMCU&#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684;&#x7269;&#x8054;&#x7F51;&#x5E73;&#x53F0;&#x3002; &#x5B83;&#x4F7F;&#x7528;Lua&#x811A;&#x672C;&#x8BED;&#x8A00;&#x7F16;&#x7A0B;&#x3002;&#x8BE5;&#x5E73;&#x53F0;&#x57FA;&#x4E8E;eLua&#x5F00;&#x6E90;&#x9879;&#x76EE;&#x3002;&#x300C;<strong>NodeMCU-32S</strong>&#x300D;&#x57FA;&#x4E8E;ESP-32S&#x6A21;&#x5757;&#x3002;&#x8BE5;&#x5E73;&#x53F0;&#x4F7F;&#x7528;&#x4E86;&#x5F88;&#x591A;&#x5F00;&#x6E90;&#x9879;&#x76EE;, &#x4F8B;&#x5982;lua-cjson, spiffs. &#x300C;<strong>NodeMCU-32S</strong>&#x300D;&#x5305;&#x542B;&#x4E86;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x5728;ESP32 Wi-Fi SoC&#x82AF;&#x7247;&#x4E4B;&#x4E0A;&#x7684;&#x56FA;&#x4EF6;,&#x4EE5;&#x53CA;&#x57FA;&#x4E8E;ESP-32S&#x6A21;&#x7EC4;&#x7684;&#x786C;&#x4EF6;&#x3002;ESP32&#x662F;&#x4E0A;&#x6D77;Espressif&#x7814;&#x53D1;&#x7684;WiFi+&#x84DD;&#x7259;&#x82AF;&#x7247;&#xFF0C;&#x65E8;&#x5728;&#x4E3A;&#x5D4C;&#x5165;&#x5F0F;&#x7C7B;&#x4EA7;&#x54C1;&#x63D0;&#x4F9B;&#x63A5;&#x5165;&#x7F51;&#x7EDC;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<p><img src="img/nodemcu_32s_size1.png" alt=""><img src="img/nodemcu_32s_size2.png" alt=""></p>
+<p>&#x5728;&#x5B66;&#x4E60;&#x4F7F;&#x7528;&#x4E4B;&#x524D;&#xFF0C;&#x8BF7;&#x5148;&#x5B66;&#x4E60;&#x5E76;&#x53C2;&#x8003;<a href="ref/nodemcu_32s_pin_description.html">&#x786C;&#x4EF6;&#x5F15;&#x811A;&#x8BF4;&#x660E;</a></p>
+<h2 id="gpio"><a href="hardware/pin.html">GPIO</a></h2>
+<h2 id="&#x5EF6;&#x65F6;&#x5668;"><a href="hardware/utime.html">&#x5EF6;&#x65F6;&#x5668;</a></h2>
+<h2 id="&#x5B9A;&#x65F6;&#x5668;"><a href="hardware/timer.html">&#x5B9A;&#x65F6;&#x5668;</a></h2>
+<h2 id="pwm&#x4E0E;&#x547C;&#x5438;&#x706F;"><a href="hardware/pwm.html">PWM&#x4E0E;&#x547C;&#x5438;&#x706F;</a></h2>
+<h2 id="&#x89E6;&#x6478;&#x4F20;&#x611F;&#x5668;"><a href="hardware/touch.html">&#x89E6;&#x6478;&#x4F20;&#x611F;&#x5668;</a></h2>
 
                                 
                                 </section>
@@ -570,12 +549,12 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 前言">
+                <a href="use_ide_to_dev_micropython_esp32.html" class="navigation navigation-prev " aria-label="Previous page: Pychar 环境下Mciropython的开发配置">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="flash_firmware.html" class="navigation navigation-next " aria-label="Next page: 烧录固件">
+                <a href="hardware/pin.html" class="navigation navigation-next " aria-label="Next page: GPIO">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -586,7 +565,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"实验环境与实验工具操作","level":"1.2","depth":1,"next":{"title":"烧录固件","level":"1.3","depth":1,"path":"flash_firmware.md","ref":"flash_firmware.md","articles":[]},"previous":{"title":"前言","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"prepare.md","mtime":"2019-04-30T07:15:59.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-04-07T01:42:00.882Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ESP32基本硬件控制","level":"1.7","depth":1,"next":{"title":"GPIO","level":"1.7.1","depth":2,"path":"hardware/pin.md","ref":"hardware/pin.md","articles":[]},"previous":{"title":"Pychar 环境下Mciropython的开发配置","level":"1.6","depth":1,"path":"use_ide_to_dev_micropython_esp32.md","ref":"use_ide_to_dev_micropython_esp32.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"esp32_basic_hardware_control.md","mtime":"2019-05-14T03:14:31.724Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-14T03:14:46.147Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -594,6 +573,10 @@
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
