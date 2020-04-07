@@ -23,6 +23,7 @@
 * [Arduino下开发ESP32应用](esp32_dev_with_arduino.md)
 * [PlatformIO下开发ESP32应用](esp32_dev_with_platformio.md)
 * [参考文档](reference.md)
+    * [硬件清单及购买参考](ref/hardware_list.md)
     * [操作系统](ref/os.md)
     * [串口驱动](ref/serial_driver.md)
     * [ampy操作指南](ref/ampy_usage.md)
