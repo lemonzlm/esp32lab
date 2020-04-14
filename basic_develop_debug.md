@@ -18,9 +18,9 @@
 
 常见的适用于micropython的代码管理工具
 
-- [Ampy](ampy_usage.md)
-- [Rshell](rshell_usage.md)
-- [mpfshell](mpfshell_usage.md)
+- [Ampy](ref/ampy_usage.md)
+- [Rshell](ref/rshell_usage.md)
+- [mpfshell](ref/mpfshell_usage.md)
 
 ###  利用pycharm community编辑代码
 
