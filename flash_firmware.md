@@ -2,7 +2,7 @@
 
 ## 下载固件
 
-首先，请下载Micropython固件，本实验使用esp32芯片，请前往[下载地址](http://micropython.org/download#esp32)。下载时，选择standard firmware (latest)。
+首先，请下载Micropython固件，本实验使用esp32芯片，请前往[下载地址](http://micropython.org/download/esp32/)。下载时，选择GENERIC (latest)。
 
 ## 安装烧录工具
 

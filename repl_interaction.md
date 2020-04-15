@@ -13,7 +13,7 @@ REPL是以下四个英语单词的首字母缩写：
 
 ## 连接REPL
 
-与python相同，micropython的固件烧录到开发版后，系统启动后自动进入REPL，使用minicom或者picocom链接到串口。就进入了repl，详情请参看[串口操作](serial_driver.md)。
+与python相同，micropython的固件烧录到开发版后，系统启动后自动进入REPL，使用minicom或者picocom链接到串口。就进入了repl，详情请参看[串口操作](ref/serial_driver.md)。
 
 ```python
 >>>
@@ -140,7 +140,7 @@ paste mode; Ctrl-C to cancel, Ctrl-D to finish
 
 Windows下，你可以直接关闭putty的窗口。
 
-Linux或Mac下，当然你也可以直接关闭你的终端窗口。但是只需要退出`picocom`或者`minicom` 即可断开与ESP32开发板的连接，你需要依次使用到如下的快捷键：
+Linux或Mac下，你也可以选择直接关闭你的终端窗口。更为科学的方法是要退出`picocom`或者`minicom` ，即可断开与ESP32开发板的连接，需要依次使用到如下的快捷键：
 
 **对于picocom**
 

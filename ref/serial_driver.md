@@ -8,9 +8,15 @@ Usb-2-ttl chip ch210x driver:
 
 ## linux 下的驱动安装
 
+linux 下需要知道你系统的Linux内核版本，然后选择相应的版本下载，版本查询命令：
+
+```shell
+uname -a
+```
+
 下载驱动后，解压后，进入文件夹，认真阅读安装指南CP210x_VCP_Linux_4.x_Release_Notes.txt。
 
-Ubuntu 下的安装指南
+Ubuntu 下的安装指南(本例中，版本为LInux4.x)
 
 ```shell
 make ( your cp210x driver )
