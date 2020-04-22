@@ -1,12 +1,16 @@
 # Rshell 操作手册
 
-rshell也称为远程mciropython shell。他以为这我们可以在计算机端同时操作本地文档，和开发版上的文档。
+rshell也称为远程mciropython shell。专门针对MicroPython的远程shell，基于串口和网络。支持多种模式：
 
-它是一个简单的shell，在主机上运行，并使用MicroPython的raw-REPL将python片段发送到pyboard（我们的例子中是esp32开发版，也叫nodeMCU-32S），以获取文件系统信息，以及从MicroPython的文件系统复制文件。
+- raw REPL
+- 远程文件管理
+  - 复制本地文件到目标板
+  - 在远程目标板进行文件系统常规操作，如目录管理，文件管理等
+- 调试
 
-它还能够调用常规REPL，因此rshell也可以用作终端模拟器。
+Rshell在主机上运行，可以将MicroPython代码发送到目标板文件系统下（如pyboard，我们的实验中是esp32开发版，也叫nodeMCU-32S），以及从MicroPython的文件系统复制文件。
 
-注意：使用rshell，您可以禁用USB Mass Storage并仍然将文件复制到pyboard中或从中复制出来。
+RSHELL可以进入常规REPL，因此rshell也可以用作终端模拟器。
 
 **注意，注意，注意** ！使用这些命令时，/flash目录和/sdcard目录（如果插入了SD卡）被认为是在pyboard上，所有其他目录都被认为是在主机上。 对于基于ESP的电路板，您只能使用电路板名称来引用其目录，**在我们的开发版上为为 /pyboard。**
 

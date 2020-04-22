@@ -1,6 +1,6 @@
 # ampy文件管理工具
 
-Ampy是Adafruit 公司提供的用于与micropython 开发板通过串行口进行文件交互管理的一套简单工具，这样当我们在编辑器写好了程序，就可以通过ampy上传到开发板硬件上一次执行。而不用向解释环境那样一句句的执行。
+Ampy是Adafruit 公司提供的用于与micropython 开发板通过串行口进行文件交互管理的一套简单工具，这样当我们在编辑器写好了程序，就可以通过ampy上传到开发板硬件上一次执行一个文件，或这一个项目。而不用向解释环境那样一句句的执行。
 
 ## 安装ampy
 
@@ -62,7 +62,7 @@ ampy --port /dev/ttyUSB0 put main.py
 ### Ampy 列出开发板文件
 
 ```shell
-ampy --port /dev/ttyUSB0 put main.py
+ampy --port /dev/ttyUSB0 ls
 ```
 
 ### Ampy 删除开发板文件

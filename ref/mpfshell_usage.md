@@ -1,6 +1,6 @@
 # mpfshell 操作指南
 
-一个简单的基于shell的文件浏览器，用于ESP8266和基于WiPy Micropython的设备。 shell是一个帮助程序，用于向ESP8266（通过串行线和Websockets）和WiPy（串行线和telnet）上传/下载文件。它基本上提供了在设备的闪存FS上列出和上传/下载文件的命令。
+mpfshell是一个简单的基于shell的文件浏览器，用于ESP8266和基于WiPy Micropython的设备。 mpfshell是一个帮助程序，用于向ESP8266（通过串行线和Websockets）和WiPy（串行线和telnet）**上传/下载**文件。它提供了在设备的闪存上列出和上传以及下载文件的命令。
 
 ## 安装
 

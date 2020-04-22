@@ -22,17 +22,17 @@
 - [Rshell](ref/rshell_usage.md)
 - [mpfshell](ref/mpfshell_usage.md)
 
-###  利用pycharm community编辑代码
+###  采用pycharm community编辑代码
 
 #### 下载编辑器
 
-本手册在使用Python编程时建议使用pycharm进行代码编辑。pycharm因为是商业软件，不能直接使用，我们这里采用 pycharm community 版本，该版本免费开放，已经够我们实验使用，请前往[下载](https://www.jetbrains.com/pycharm/download/#section=linux)。
+Pycharm因为是商业软件，不能直接使用，我们这里采用 pycharm community 版本，该版本免费开放，已经够我们实验使用，请前往[下载](https://www.jetbrains.com/pycharm/download/#section=linux)。
 
 ![请注意下载community版本](img/download_pycharm_ide_community.png)
 
 #### 配置编辑器
 
-有关pycharm的具体使用参见[Pychar 环境下Mciropython的开发配置](basic_develop_debug.md), 本节课不用配置，只需要书写代码，体验其特性即可。
+有关pycharm的具体使用参见[Pycharm 环境下Mciropython的开发配置](pycharm_dev.md), 本节课不用配置，只需要书写代码，体验其特性即可。
 
 #### 编写代码
 
@@ -72,27 +72,53 @@ ampy --port /dev/ttyUSB0 put main.py
 
 #### 利用rshell管理代码
 
+```shell
+rshell
+cp main.py /pyboard/
+```
+
 
 
 ### 提高练习
 
 请根据以上的实验内容，修改代码，要求将闪烁LED灯的功能封装到另一个文件中，如led_blink.py, 由main.py来调用。
 
+### 采用VS Code 编辑并管理代码
+
+VS Code对python的支持极好，但是对于MicroPython的支持相对较弱，不但缺少相应的代码补全等必要的编辑功能，同时也缺乏必要的代码管理功能，如：文件上传，烧录，在线运行等调试等功能。
+
+自从正点原子团队发布了RT-Thread MircoPython 插件后，情况得到了很大的改善。该插件目前支持STM32，ESP32, ESP2866等芯片，详情请参见 [RT-Thread MicroPython](https://github.com/RT-Thread-packages/micropython)。
+
+本插件目前是VSCODE环境下相对较好的MicroPython插件。**推荐使用**。
+
+由于该插件推出时间不长，其稳定性仍需验证以及更长时间的版本升级迭代。依据目前测试情况，其在Mac OSX，Ubuntu18下无重大BUG报告。Windows下，本人未做相应测试，因此不可知。
+
 ## 定制IDE
 
-IDE的功能更为强大，他不但能编辑，调试，同时还能烧录文件等。因为ESP32位比较新的芯片，因此配套的IDE还不是很成熟，主要有以下几种
+IDE的功能更为强大，不但能编辑，调试，同时还能烧录文件等。因为ESP32是比较新的芯片，因此配套的IDE还不是很成熟，主要有以下几种
+
+### 使用MicroPython的IDE
 
 - Pycharm + micropython plugin
 - **Pycharm + microPython Plugin + rshell**
-- PlatformIDE
+- **VS Code + RT Thread Extension**
+-  [thonny](https://randomnerdtutorials.com/getting-started-thonny-micropython-python-ide-esp32-esp8266/)
+- [uPyCraft](http://docs.dfrobot.com.cn/upycraft/)
+  
+### 使用C语言的IDE
+
+- VS Code + PlatformIO Extension
 - Arduino IDE
-- [thonny](https://randomnerdtutorials.com/getting-started-thonny-micropython-python-ide-esp32-esp8266/)
-- [uPyCraft](https://randomnerdtutorials.com/getting-started-thonny-micropython-python-ide-esp32-esp8266/)
+- VS Code + Expressif Extension
+
 
 > **注意**
 >
-> 本实验手册重点在使用python开始时，使用pycharm
+> 本实验指导重点在于使用python，开始时，使用 `pycharm`
 >
-> 当使用c或arduino开发时，采用platformIO。
+> 当使用c或arduino开发时，采用 `vscode + platformIO`。
 
-下一次实验我们将重点演练`Pycharm + microPython Plugin + rshell`
+接下来的两次实验我们将重点演练 
+
+- [Pycharm + microPython Plugin + rshell](pycharm_dev.md)
+- [VS Code + RT Thread Extension](vscode_rt_thread_dev.md)
