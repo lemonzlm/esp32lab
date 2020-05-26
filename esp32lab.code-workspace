@@ -3,6 +3,17 @@
 		{
 			"name": "RT-Thread MicroPython",
 			"path": "code/vscode/rt-thread-mpy"
+		},
+		{
+			"name": "esp32-pio-arduino-exp",
+			"path": "code/esp32-pio-arduino-exp"
+		},
+		{
+			"name": "NodeMCU32S-PIO-IDF-EXP",
+			"path": "code/NodeMCU32S-PIO-IDF-EXP"
+		},
+		{
+			"path": "."
 		}
 	],
 	"settings": {

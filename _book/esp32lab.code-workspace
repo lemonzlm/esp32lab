@@ -1,6 +1,18 @@
 {
 	"folders": [
 		{
+			"name": "RT-Thread MicroPython",
+			"path": "code/vscode/rt-thread-mpy"
+		},
+		{
+			"name": "esp32-pio-arduino-exp",
+			"path": "code/esp32-pio-arduino-exp"
+		},
+		{
+			"name": "NodeMCU32S-PIO-IDF-EXP",
+			"path": "code/NodeMCU32S-PIO-IDF-EXP"
+		},
+		{
 			"path": "."
 		}
 	],
@@ -22,6 +34,16 @@
 				"command": "extension.execute",
 				"priority": 4
 			}
-		]
+		],
+		"python.autoComplete.extraPaths": [
+			"/Users/lemon/.vscode/extensions/rt-thread.rt-thread-micropython-1.0.7/microExamples/code-completion"
+		],
+		"python.linting.pylintArgs": [
+			"--init-hook",
+			"import sys; sys.path.append('/Users/lemon/.vscode/extensions/rt-thread.rt-thread-micropython-1.0.7/microExamples/code-completion')"
+		],
+		"files.associations": {
+			".mpyproject.json": "jsonc"
+		}
 	}
 }
