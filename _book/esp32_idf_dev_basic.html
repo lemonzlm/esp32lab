@@ -549,13 +549,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="esp-idf-&#x5F00;&#x53D1;&#x57FA;&#x672C;&#x8FC7;&#x7A0B;">ESP-IDF &#x5F00;&#x53D1;&#x57FA;&#x672C;&#x8FC7;&#x7A0B;</h1>
-<h2 id="&#x914D;&#x7F6E;esp-idf">&#x914D;&#x7F6E;ESP-IDF</h2>
-<h3 id="&#x83B7;&#x53D6;&#x5DE5;&#x5177;&#x94FE;&#x7684;&#x4F9D;&#x8D56;&#x5305;">&#x83B7;&#x53D6;&#x5DE5;&#x5177;&#x94FE;&#x7684;&#x4F9D;&#x8D56;&#x5305;</h3>
+                                <h1 id="esp-idf-&#x5BEE;&#x20AC;&#x9359;&#x621D;&#x7180;&#x93C8;&#xE103;&#x7E43;&#x7ECB;&#xFFFD;">ESP-IDF &#x5BEE;&#x20AC;&#x9359;&#x621D;&#x7180;&#x93C8;&#xE103;&#x7E43;&#x7ECB;&#xFFFD;</h1>
+<h2 id="&#x95B0;&#x5D87;&#x7586;esp-idf">&#x95B0;&#x5D87;&#x7586;ESP-IDF</h2>
+<h3 id="&#x947E;&#x5CF0;&#x5F47;&#x5BB8;&#x30E5;&#x53FF;&#x95BE;&#x5267;&#x6B91;&#x6E1A;&#x6FCA;&#x7986;&#x9356;&#xFFFD;">&#x947E;&#x5CF0;&#x5F47;&#x5BB8;&#x30E5;&#x53FF;&#x95BE;&#x5267;&#x6B91;&#x6E1A;&#x6FCA;&#x7986;&#x9356;&#xFFFD;</h3>
 <pre><code class="lang-shell"># for debian or ubuntu
 sudo apt-get install gcc git wget make libncurses-dev flex bison gperf python python-pip python-setuptools python-serial python-cryptography python-future python-pyparsing
 </code></pre>
-<h3 id="&#x83B7;&#x53D6;&#x5DE5;&#x5177;&#x94FE;">&#x83B7;&#x53D6;&#x5DE5;&#x5177;&#x94FE;</h3>
+<h3 id="&#x947E;&#x5CF0;&#x5F47;&#x5BB8;&#x30E5;&#x53FF;&#x95BE;&#xFFFD;">&#x947E;&#x5CF0;&#x5F47;&#x5BB8;&#x30E5;&#x53FF;&#x95BE;&#xFFFD;</h3>
 <pre><code class="lang-shell"># dowload tool chain
 mkdir -p ~/esp
 cd ~/esp
@@ -564,12 +564,12 @@ tar -xzf xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.tar.gz
 # setup evn
 echo &apos;export PATH=&quot;$HOME/esp32/xtensa-esp32-elf/bin:$PATH&quot;&apos; &gt;&gt; ~/.bashrc
 </code></pre>
-<h3 id="&#x83B7;&#x53D6;esp-idf">&#x83B7;&#x53D6;ESP-IDF</h3>
+<h3 id="&#x947E;&#x5CF0;&#x5F47;esp-idf">&#x947E;&#x5CF0;&#x5F47;ESP-IDF</h3>
 <pre><code class="lang-shell">mkdir esp
 cd esp
 git clone --recursive https://github.com/espressif/esp-idf.git
 </code></pre>
-<h3 id="&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;">&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;</h3>
+<h3 id="&#x95B0;&#x5D87;&#x7586;&#x941C;&#xE21A;&#xE568;&#x9359;&#x6A40;&#x567A;">&#x95B0;&#x5D87;&#x7586;&#x941C;&#xE21A;&#xE568;&#x9359;&#x6A40;&#x567A;</h3>
 <pre><code class="lang-shell">## for mac osx
 nano ~/.bash_profile
 ## addlines to the file
@@ -577,66 +577,66 @@ export IDF_PATH=~/esp/esp-idf
 ## for ubuntu or debian
 echo &apos;export IDF_PATH=$HOME/esp/esp-idf&apos;&gt;&gt; ~/.bashrc
 </code></pre>
-<h3 id="&#x5B89;&#x88C5;python&#x8F6F;&#x4EF6;&#x5305;">&#x5B89;&#x88C5;Python&#x8F6F;&#x4EF6;&#x5305;</h3>
-<pre><code class="lang-shell"># esp &#x5DE5;&#x7A0B;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;python2
+<h3 id="&#x7039;&#x590E;&#xE5CA;python&#x675E;&#xE219;&#x6B22;&#x9356;&#xFFFD;">&#x7039;&#x590E;&#xE5CA;Python&#x675E;&#xE219;&#x6B22;&#x9356;&#xFFFD;</h3>
+<pre><code class="lang-shell"># esp &#x5BB8;&#x30E7;&#x25BC;&#x699B;&#x6A3F;&#xE17B;&#x6D63;&#x8DE8;&#x6564;python2
 python -m pip install --user -r $IDF_PATH/requirements.txt
 
-## &#x5BF9;&#x4E8E;python3
+## &#x7035;&#x901B;&#x7C2C;python3
 pip3 install --upgrade pip
 python3 -m pip install --user -r $IDF_PATH/requirements.txt
-## &#x5BF9;&#x4E8E;&#x6709;&#x7684;&#x7CFB;&#x7EDF;&#xFF0C;&#x53EF;&#x80FD;&#x8981;&#x6DFB;&#x52A0;Python&#x5305;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;,&#x4EE5;&#x6211;&#x7684;&#x4E3A;&#x4F8B;&#x5B50;&#x3002;
+## &#x7035;&#x901B;&#x7C2C;&#x93C8;&#x590C;&#x6B91;&#x7EEF;&#x8364;&#x7CBA;&#x951B;&#x5C7D;&#x5F72;&#x9473;&#x501F;&#xE6E6;&#x5A23;&#x8BF2;&#x59DE;Python&#x9356;&#x546F;&#x6B91;&#x941C;&#xE21A;&#xE568;&#x9359;&#x6A40;&#x567A;,&#x6D60;&#x30E6;&#x579C;&#x9428;&#x52EA;&#x8D1F;&#x6E1A;&#x5B2A;&#x74D9;&#x9286;&#xFFFD;
 export PATH=/Users/lemon/Library/Python/3.6/bin
 </code></pre>
-<h2 id="&#x5F00;&#x59CB;&#x521B;&#x5EFA;&#x5DE5;&#x7A0B;">&#x5F00;&#x59CB;&#x521B;&#x5EFA;&#x5DE5;&#x7A0B;</h2>
-<p>&#x73B0;&#x5728;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x51C6;&#x5907;&#x5F00;&#x53D1; ESP32 &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E86;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x4ECE; ESP-IDF &#x4E2D; <a href="https://github.com/espressif/esp-idf/tree/ad3b820e7/examples" target="_blank">examples</a> &#x76EE;&#x5F55;&#x4E0B;&#x7684; <a href="https://github.com/espressif/esp-idf/tree/ad3b820e7/examples/get-started/hello_world" target="_blank">get-started/hello_world</a> &#x5DE5;&#x7A0B;&#x5F00;&#x59CB;&#x3002;</p>
-<p>&#x5C06; <a href="https://github.com/espressif/esp-idf/tree/ad3b820e7/examples/get-started/hello_world" target="_blank">get-started/hello_world</a> &#x590D;&#x5236;&#x81F3;&#x60A8;&#x672C;&#x5730;&#x7684; <code>~/esp</code> &#x76EE;&#x5F55;&#x4E0B;&#xFF1A;</p>
-<h3 id="linux-&#x548C;-macos-&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;">Linux &#x548C; MacOS &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;</h3>
+<h2 id="&#x5BEE;&#x20AC;&#x6FEE;&#x5B2A;&#x57B1;&#x5BE4;&#x54C4;&#x4F10;&#x7ECB;&#xFFFD;">&#x5BEE;&#x20AC;&#x6FEE;&#x5B2A;&#x57B1;&#x5BE4;&#x54C4;&#x4F10;&#x7ECB;&#xFFFD;</h2>
+<p>&#x941C;&#x677F;&#x6E6A;&#x951B;&#x5C7E;&#x504D;&#x9359;&#xE219;&#x4E92;&#x5BEE;&#x20AC;&#x6FEE;&#x5B2A;&#x566F;&#x6FB6;&#x56E7;&#x7D11;&#x9359;&#xFFFD; ESP32 &#x6434;&#x65C2;&#x6564;&#x7ECB;&#x5B2A;&#x7C2D;&#x6D5C;&#x55D0;&#x20AC;&#x509B;&#x504D;&#x9359;&#xE219;&#x4E92;&#x6D60;&#xFFFD; ESP-IDF &#x6D93;&#xFFFD; <a href="https://github.com/espressif/esp-idf/tree/ad3b820e7/examples" target="_blank">examples</a> &#x9429;&#xE1BC;&#x7D8D;&#x6D93;&#x5B2C;&#x6B91; <a href="https://github.com/espressif/esp-idf/tree/ad3b820e7/examples/get-started/hello_world" target="_blank">get-started/hello_world</a> &#x5BB8;&#x30E7;&#x25BC;&#x5BEE;&#x20AC;&#x6FEE;&#x5B28;&#x20AC;&#xFFFD;</p>
+<p>&#x704F;&#xFFFD; <a href="https://github.com/espressif/esp-idf/tree/ad3b820e7/examples/get-started/hello_world" target="_blank">get-started/hello_world</a> &#x6FB6;&#x5D85;&#x57D7;&#x9477;&#x866B;&#x504D;&#x93C8;&#xE100;&#x6E74;&#x9428;&#xFFFD; <code>~/esp</code> &#x9429;&#xE1BC;&#x7D8D;&#x6D93;&#x5B36;&#x7D30;</p>
+<h3 id="linux-&#x935C;&#xFFFD;-macos-&#x93BF;&#x5D84;&#x7D94;&#x7EEF;&#x8364;&#x7CBA;">Linux &#x935C;&#xFFFD; MacOS &#x93BF;&#x5D84;&#x7D94;&#x7EEF;&#x8364;&#x7CBA;</h3>
 <pre><code class="lang-shell">cd ~/esp
 cp -r $IDF_PATH/examples/get-started/hello_world .
 </code></pre>
-<h3 id="windows-&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;">Windows &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;</h3>
+<h3 id="windows-&#x93BF;&#x5D84;&#x7D94;&#x7EEF;&#x8364;&#x7CBA;">Windows &#x93BF;&#x5D84;&#x7D94;&#x7EEF;&#x8364;&#x7CBA;</h3>
 <pre><code class="lang-shell">cd %userprofile%\esp
 xcopy /e /i %IDF_PATH%\examples\get-started\hello_world hello_world
 </code></pre>
-<p>ESP-IDF &#x7684; <a href="https://github.com/espressif/esp-idf/tree/ad3b820e7/examples" target="_blank">examples</a> &#x76EE;&#x5F55;&#x4E0B;&#x6709;&#x4E00;&#x7CFB;&#x5217;&#x793A;&#x4F8B;&#x5DE5;&#x7A0B;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x4E0A;&#x9762;&#x7684;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x521B;&#x5EFA;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x4E0A;&#x8FF0;&#x65B9;&#x6CD5;&#x590D;&#x5236;&#x5E76;&#x8FD0;&#x884C;&#x5176;&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x793A;&#x4F8B;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7F16;&#x8BD1;&#x793A;&#x4F8B;&#xFF0C;&#x65E0;&#x9700;&#x8FDB;&#x884C;&#x590D;&#x5236;&#x3002;</p>
-<p><strong>&#x6CE8;&#x610F;</strong></p>
-<p>ESP-IDF &#x7F16;&#x8BD1;&#x7CFB;&#x7EDF;&#x4E0D;&#x652F;&#x6301;&#x5E26;&#x6709;&#x7A7A;&#x683C;&#x7684;&#x8DEF;&#x5F84;&#x3002;</p>
-<h2 id="&#x8FDE;&#x63A5;&#x8BBE;&#x5907;">&#x8FDE;&#x63A5;&#x8BBE;&#x5907;</h2>
-<p>&#x73B0;&#x5728;&#xFF0C;&#x8BF7;&#x5C06;&#x60A8;&#x7684; ESP32 &#x5F00;&#x53D1;&#x677F;&#x8FDE;&#x63A5;&#x5230; PC&#xFF0C;&#x5E76;&#x67E5;&#x770B;&#x5F00;&#x53D1;&#x677F;&#x4F7F;&#x7528;&#x7684;&#x4E32;&#x53E3;&#x3002;</p>
-<p>&#x901A;&#x5E38;&#xFF0C;&#x4E32;&#x53E3;&#x5728;&#x4E0D;&#x540C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E0B;&#x663E;&#x793A;&#x7684;&#x540D;&#x79F0;&#x6709;&#x6240;&#x4E0D;&#x540C;&#xFF1A;</p>
+<p>ESP-IDF &#x9428;&#xFFFD; <a href="https://github.com/espressif/esp-idf/tree/ad3b820e7/examples" target="_blank">examples</a> &#x9429;&#xE1BC;&#x7D8D;&#x6D93;&#x5B2B;&#x6E41;&#x6D93;&#x20AC;&#x7EEF;&#x8BF2;&#x57AA;&#x7EC0;&#x8F70;&#x7DE5;&#x5BB8;&#x30E7;&#x25BC;&#x951B;&#x5C84;&#x5158;&#x9359;&#xE219;&#x4E92;&#x93B8;&#x590C;&#x53CE;&#x6D93;&#x5A47;&#x6F70;&#x9428;&#x52EC;&#x67DF;&#x5A09;&#x66E1;&#x7E58;&#x741B;&#x5C7D;&#x57B1;&#x5BE4;&#x6052;&#x20AC;&#x509B;&#x504D;&#x9359;&#xE219;&#x4E92;&#x93B8;&#x590C;&#x53CE;&#x6D93;&#x5A45;&#x582A;&#x93C2;&#x89C4;&#x7876;&#x6FB6;&#x5D85;&#x57D7;&#x9A9E;&#x60F0;&#x7E4D;&#x741B;&#x5C7D;&#x53FE;&#x6D93;&#xE160;&#x6B91;&#x6D60;&#x8BB3;&#x7D8D;&#x7EC0;&#x8F70;&#x7DE5;&#x951B;&#x5C7C;&#x7BC3;&#x9359;&#xE219;&#x4E92;&#x9429;&#x5B58;&#x5E34;&#x7F02;&#x682C;&#x7627;&#x7EC0;&#x8F70;&#x7DE5;&#x951B;&#x5C7E;&#x68E4;&#x95C7;&#x20AC;&#x6769;&#x6D9C;&#xE511;&#x6FB6;&#x5D85;&#x57D7;&#x9286;&#xFFFD;</p>
+<p><strong>&#x5A09;&#x3126;&#x5270;</strong></p>
+<p>ESP-IDF &#x7F02;&#x682C;&#x7627;&#x7EEF;&#x8364;&#x7CBA;&#x6D93;&#x5D86;&#x656E;&#x93B8;&#x4F78;&#x752B;&#x93C8;&#x590C;&#x2516;&#x93CD;&#x80A9;&#x6B91;&#x74BA;&#xE21A;&#x7DDE;&#x9286;&#xFFFD;</p>
+<h2 id="&#x6769;&#x70B4;&#x5E34;&#x7481;&#x60E7;&#xE62C;">&#x6769;&#x70B4;&#x5E34;&#x7481;&#x60E7;&#xE62C;</h2>
+<p>&#x941C;&#x677F;&#x6E6A;&#x951B;&#x5C83;&#xE1EC;&#x704F;&#x55D8;&#x504D;&#x9428;&#xFFFD; ESP32 &#x5BEE;&#x20AC;&#x9359;&#x621E;&#x6F98;&#x6769;&#x70B4;&#x5E34;&#x9352;&#xFFFD; PC&#x951B;&#x5C7D;&#x82DF;&#x93CC;&#x30E7;&#x6E45;&#x5BEE;&#x20AC;&#x9359;&#x621E;&#x6F98;&#x6D63;&#x8DE8;&#x6564;&#x9428;&#x52EA;&#x8986;&#x9359;&#xFF43;&#x20AC;&#xFFFD;</p>
+<p>&#x95AB;&#x6C2C;&#x7236;&#x951B;&#x5C7C;&#x8986;&#x9359;&#xFF45;&#x6E6A;&#x6D93;&#x5D85;&#x6093;&#x93BF;&#x5D84;&#x7D94;&#x7EEF;&#x8364;&#x7CBA;&#x6D93;&#x5B2B;&#x6A09;&#x7EC0;&#x8679;&#x6B91;&#x935A;&#x5D87;&#x41E;&#x93C8;&#x590B;&#x588D;&#x6D93;&#x5D85;&#x6093;&#x951B;&#xFFFD;</p>
 <ul>
-<li><strong>Windows &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF1A;</strong> <code>COM1</code> &#x7B49;</li>
-<li><strong>Linux &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF1A;</strong> &#x4EE5; <code>/dev/tty</code> &#x5F00;&#x59CB;</li>
-<li><strong>MacOS &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF1A;</strong> &#x4EE5; <code>/dev/cu.</code> &#x5F00;&#x59CB;</li>
+<li><strong>Windows &#x93BF;&#x5D84;&#x7D94;&#x7EEF;&#x8364;&#x7CBA;&#x951B;&#xFFFD;</strong> <code>COM1</code> &#x7EDB;&#xFFFD;</li>
+<li><strong>Linux &#x93BF;&#x5D84;&#x7D94;&#x7EEF;&#x8364;&#x7CBA;&#x951B;&#xFFFD;</strong> &#x6D60;&#xFFFD; <code>/dev/tty</code> &#x5BEE;&#x20AC;&#x6FEE;&#xFFFD;</li>
+<li><strong>MacOS &#x93BF;&#x5D84;&#x7D94;&#x7EEF;&#x8364;&#x7CBA;&#x951B;&#xFFFD;</strong> &#x6D60;&#xFFFD; <code>/dev/cu.</code> &#x5BEE;&#x20AC;&#x6FEE;&#xFFFD;</li>
 </ul>
-<p>&#x6709;&#x5173;&#x5982;&#x4F55;&#x67E5;&#x770B;&#x4E32;&#x53E3;&#x540D;&#x79F0;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x89C1; <a href="ref/serial_driver.html">&#x4E0E; ESP32 &#x521B;&#x5EFA;&#x4E32;&#x53E3;&#x8FDE;&#x63A5;</a>&#x3002;</p>
-<h2 id="&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</h2>
-<p>&#x8BF7;&#x8FDB;&#x5165;&#x7B2C;&#x4E94;&#x6B65;&#xFF1A;&#x5F00;&#x59CB;&#x521B;&#x5EFA;&#x5DE5;&#x7A0B; &#x4E2D;&#x63D0;&#x5230;&#x7684; <code>hello_world</code> &#x76EE;&#x5F55;&#xFF0C;&#x5E76;&#x8FD0;&#x884C;&#x5DE5;&#x7A0B;&#x914D;&#x7F6E;&#x5DE5;&#x5177; <code>menuconfig</code>&#x3002;</p>
-<h3 id="linux-&#x548C;-macos-&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;">Linux &#x548C; MacOS &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;</h3>
+<p>&#x93C8;&#x590A;&#x53E7;&#x6FE1;&#x5099;&#x7D8D;&#x93CC;&#x30E7;&#x6E45;&#x6D93;&#x63D2;&#x5F5B;&#x935A;&#x5D87;&#x41E;&#x9428;&#x52EE;&#xE1DB;&#x7F01;&#x55D5;&#x4FCA;&#x93AD;&#xE224;&#x7D1D;&#x7487;&#x75AF;&#xE746; <a href="ref/serial_driver.html">&#x6D93;&#xFFFD; ESP32 &#x9352;&#x6D98;&#x7F13;&#x6D93;&#x63D2;&#x5F5B;&#x6769;&#x70B4;&#x5E34;</a>&#x9286;&#xFFFD;</p>
+<h2 id="&#x95B0;&#x5D87;&#x7586;">&#x95B0;&#x5D87;&#x7586;</h2>
+<p>&#x7487;&#x75AF;&#x7E58;&#x934F;&#x30E7;&#xE0C7;&#x6D5C;&#x65C0;&#xE11E;&#x951B;&#x6C2C;&#x7D11;&#x6FEE;&#x5B2A;&#x57B1;&#x5BE4;&#x54C4;&#x4F10;&#x7ECB;&#xFFFD; &#x6D93;&#xE15F;&#x5F41;&#x9352;&#x626E;&#x6B91; <code>hello_world</code> &#x9429;&#xE1BC;&#x7D8D;&#x951B;&#x5C7D;&#x82DF;&#x6769;&#x612F;&#xE511;&#x5BB8;&#x30E7;&#x25BC;&#x95B0;&#x5D87;&#x7586;&#x5BB8;&#x30E5;&#x53FF; <code>menuconfig</code>&#x9286;&#xFFFD;</p>
+<h3 id="linux-&#x935C;&#xFFFD;-macos-&#x93BF;&#x5D84;&#x7D94;&#x7EEF;&#x8364;&#x7CBA;">Linux &#x935C;&#xFFFD; MacOS &#x93BF;&#x5D84;&#x7D94;&#x7EEF;&#x8364;&#x7CBA;</h3>
 <pre><code>cd ~/esp/hello_world
 make menuconfig
-</code></pre><h3 id="windows-&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;">Windows &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;</h3>
+</code></pre><h3 id="windows-&#x93BF;&#x5D84;&#x7D94;&#x7EEF;&#x8364;&#x7CBA;">Windows &#x93BF;&#x5D84;&#x7D94;&#x7EEF;&#x8364;&#x7CBA;</h3>
 <pre><code>cd %userprofile%\esp\hello_world
 make menuconfig
-</code></pre><p>&#x5982;&#x679C;&#x4E4B;&#x524D;&#x7684;&#x6B65;&#x9AA4;&#x90FD;&#x6B63;&#x786E;&#xFF0C;&#x5219;&#x4F1A;&#x663E;&#x793A;&#x4E0B;&#x9762;&#x7684;&#x83DC;&#x5355;&#xFF1A;</p>
+</code></pre><p>&#x6FE1;&#x509B;&#x7049;&#x6D94;&#x5B2A;&#x58A0;&#x9428;&#x52EC;&#xE11E;&#x6960;&#x3089;&#x5158;&#x59DD;&#xFF47;&#x2018;&#x951B;&#x5C7D;&#x57AF;&#x6D7C;&#x6C2D;&#x6A09;&#x7EC0;&#x8F70;&#x7B05;&#x95C8;&#x3222;&#x6B91;&#x947F;&#x6EC3;&#x5D1F;&#x951B;&#xFFFD;</p>
 <p><img src="img/project-configuration.png" alt=""></p>
-<p>&#x8FDB;&#x5165;&#x83DC;&#x5355;&#x540E;&#xFF0C;&#x9009;&#x62E9; <code>Serial flasher config</code> &gt; <code>Default serial port</code> &#x914D;&#x7F6E;&#x4E32;&#x53E3;&#xFF08;&#x8BBE;&#x5907;&#x5C06;&#x901A;&#x8FC7;&#x8BE5;&#x4E32;&#x53E3;&#x52A0;&#x8F7D;&#x5DE5;&#x7A0B;&#xFF09;&#x3002;&#x6309;&#x56DE;&#x8F66;&#x952E;&#x786E;&#x8BA4;&#x9009;&#x62E9;&#xFF0C;&#x70B9;&#x51FB; <code>&lt; Save &gt;</code> &#x4FDD;&#x5B58;&#x914D;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#x70B9;&#x51FB; <code>&lt; Exit &gt;</code> &#x9000;&#x51FA; <code>menuconfig</code>&#x3002;</p>
-<p><code>menuconfig</code> &#x5DE5;&#x5177;&#x7684;&#x5E38;&#x89C1;&#x64CD;&#x4F5C;&#x89C1;&#x4E0B;&#x3002;</p>
+<p>&#x6769;&#x6D98;&#x53C6;&#x947F;&#x6EC3;&#x5D1F;&#x935A;&#x5EAF;&#x7D1D;&#x95AB;&#x590B;&#x5AE8; <code>Serial flasher config</code> &gt; <code>Default serial port</code> &#x95B0;&#x5D87;&#x7586;&#x6D93;&#x63D2;&#x5F5B;&#x951B;&#x5823;&#xE195;&#x6FB6;&#x56E7;&#x76A2;&#x95AB;&#x6C33;&#x7E43;&#x7487;&#x30E4;&#x8986;&#x9359;&#xFF45;&#x59DE;&#x675E;&#x85C9;&#x4F10;&#x7ECB;&#x5B36;&#x7D1A;&#x9286;&#x509B;&#x5BDC;&#x9365;&#x70B6;&#x6E85;&#x95BF;&#xE1BE;&#x2018;&#x7481;&#x3089;&#x20AC;&#x590B;&#x5AE8;&#x951B;&#x5C80;&#x5063;&#x9351;&#xFFFD; <code>&lt; Save &gt;</code> &#x6DC7;&#x6FC6;&#x74E8;&#x95B0;&#x5D87;&#x7586;&#x951B;&#x5C80;&#x52A7;&#x935A;&#x5EA3;&#x5063;&#x9351;&#xFFFD; <code>&lt; Exit &gt;</code> &#x95AB;&#x20AC;&#x9351;&#xFFFD; <code>menuconfig</code>&#x9286;&#xFFFD;</p>
+<p><code>menuconfig</code> &#x5BB8;&#x30E5;&#x53FF;&#x9428;&#x52EB;&#x7236;&#x7459;&#x4F79;&#x6437;&#x6D63;&#x6EC6;&#xE746;&#x6D93;&#x5B28;&#x20AC;&#xFFFD;</p>
 <ul>
-<li><code>&#x4E0A;&#x4E0B;&#x7BAD;&#x5934;</code>&#xFF1A;&#x79FB;&#x52A8;</li>
-<li><code>&#x56DE;&#x8F66;</code>&#xFF1A;&#x8FDB;&#x5165;&#x5B50;&#x83DC;&#x5355;</li>
-<li><code>ESC &#x952E;</code>&#xFF1A;&#x8FD4;&#x56DE;&#x4E0A;&#x7EA7;&#x83DC;&#x5355;&#x6216;&#x9000;&#x51FA;</li>
-<li><code>&#x82F1;&#x6587;&#x95EE;&#x53F7;</code>&#xFF1A;&#x8C03;&#x51FA;&#x5E2E;&#x52A9;&#x83DC;&#x5355;&#xFF08;&#x9000;&#x51FA;&#x5E2E;&#x52A9;&#x83DC;&#x5355;&#xFF0C;&#x8BF7;&#x6309;&#x56DE;&#x8F66;&#x952E;&#xFF09;&#x3002;</li>
-<li><code>&#x7A7A;&#x683C;</code>&#x3001;<code>Y &#x952E;``&#x6216;``N &#x952E;</code>&#xFF1A;&#x4F7F;&#x80FD;/&#x7981;&#x7528; <code>[*]</code> &#x914D;&#x7F6E;&#x9009;&#x9879;</li>
-<li><code>&#x82F1;&#x6587;&#x95EE;&#x53F7;</code> &#xFF1A;&#x8C03;&#x51FA;&#x6709;&#x5173;&#x9AD8;&#x4EAE;&#x9009;&#x9879;&#x7684;&#x5E2E;&#x52A9;&#x83DC;&#x5355;</li>
-<li><code>/ &#x952E;</code>&#xFF1A;&#x5BFB;&#x627E;&#x914D;&#x7F6E;&#x9879;&#x76EE;</li>
+<li><code>&#x6D93;&#x5A41;&#x7B05;&#x7EE0;&#xE15E;&#x3054;</code>&#x951B;&#x6C31;&#x429;&#x9354;&#xFFFD;</li>
+<li><code>&#x9365;&#x70B6;&#x6E85;</code>&#x951B;&#x6C33;&#x7E58;&#x934F;&#x30E5;&#x74D9;&#x947F;&#x6EC3;&#x5D1F;</li>
+<li>`ESC &#x95BF;&#x7521;&#x951B;&#x6C33;&#x7E51;&#x9365;&#x70B0;&#x7B02;&#x7EFE;&#x446;&#x5F4D;&#x9357;&#x66DF;&#x57A8;&#x95AB;&#x20AC;&#x9351;&#xFFFD;</li>
+<li><code>&#x947B;&#x8FA8;&#x6783;&#x95C2;&#xE1BC;&#x5F7F;</code>&#x951B;&#x6C33;&#x769F;&#x9351;&#x54C4;&#x5E9C;&#x9354;&#x2544;&#x5F4D;&#x9357;&#x66EA;&#x7D19;&#x95AB;&#x20AC;&#x9351;&#x54C4;&#x5E9C;&#x9354;&#x2544;&#x5F4D;&#x9357;&#x66EA;&#x7D1D;&#x7487;&#x950B;&#x5BDC;&#x9365;&#x70B6;&#x6E85;&#x95BF;&#xE1C6;&#x7D1A;&#x9286;&#xFFFD;</li>
+<li><code>&#x7ECC;&#x70D8;&#x7278;</code>&#x9286;&#x4E63;Y &#x95BF;&#x7521;<code>&#x93B4;&#x673B;</code>N &#x95BF;&#x7521;&#x951B;&#x6C2B;&#x5A07;&#x9473;&#xFFFD;/&#x7EC2;&#x4F7A;&#x6564; <code>[*]</code> &#x95B0;&#x5D87;&#x7586;&#x95AB;&#x5910;&#x300D;</li>
+<li><code>&#x947B;&#x8FA8;&#x6783;&#x95C2;&#xE1BC;&#x5F7F;</code> &#x951B;&#x6C33;&#x769F;&#x9351;&#x70D8;&#x6E41;&#x934F;&#x62BD;&#x73EE;&#x6D5C;&#xE1C0;&#x20AC;&#x5910;&#x300D;&#x9428;&#x52EB;&#x5E9C;&#x9354;&#x2544;&#x5F4D;&#x9357;&#xFFFD;</li>
+<li>`/ &#x95BF;&#x7521;&#x951B;&#x6C2C;&#xE1F0;&#x93B5;&#x9E43;&#x53A4;&#x7F03;&#xE1C0;&#x300D;&#x9429;&#xFFFD;</li>
 </ul>
-<h2 id="&#x7F16;&#x8BD1;&#x548C;&#x70E7;&#x5F55;">&#x7F16;&#x8BD1;&#x548C;&#x70E7;&#x5F55;</h2>
-<p>&#x8BF7;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x7F16;&#x8BD1;&#x70E7;&#x5F55;&#x5DE5;&#x7A0B;&#xFF1A;</p>
+<h2 id="&#x7F02;&#x682C;&#x7627;&#x935C;&#x5C80;&#x5133;&#x8930;&#xFFFD;">&#x7F02;&#x682C;&#x7627;&#x935C;&#x5C80;&#x5133;&#x8930;&#xFFFD;</h2>
+<p>&#x7487;&#x8702;&#x5A07;&#x9422;&#x3124;&#x4E92;&#x6D93;&#x5B2A;&#x61E1;&#x6D60;&#x308F;&#x7D1D;&#x7F02;&#x682C;&#x7627;&#x9411;&#x443;&#x7D8D;&#x5BB8;&#x30E7;&#x25BC;&#x951B;&#xFFFD;</p>
 <pre><code class="lang-shell">make flash
 </code></pre>
-<p>&#x8FD0;&#x884C;&#x4EE5;&#x4E0A;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x7F16;&#x8BD1;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x548C;&#x6240;&#x6709; ESP-IDF &#x7EC4;&#x4EF6;&#xFF0C;&#x63A5;&#x7740;&#x751F;&#x6210; bootloader&#x3001;&#x5206;&#x533A;&#x8868;&#x548C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x3002;&#x63A5;&#x7740;&#xFF0C;&#x8FD9;&#x4E9B;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x5C06;&#x88AB;&#x70E7;&#x5F55;&#x81F3; ESP32 &#x5F00;&#x53D1;&#x677F;&#x3002;</p>
-<p>&#x5982;&#x679C;&#x4E00;&#x5207;&#x987A;&#x5229;&#xFF0C;&#x53EF;&#x5728;&#x70E7;&#x5F55;&#x5B8C;&#x6210;&#x540E;&#x770B;&#x5230;&#x7C7B;&#x4F3C;&#x4E0B;&#x65B9;&#x7684;&#x6253;&#x5370;&#x4FE1;&#x606F;&#xFF08;&#x4EE3;&#x8868;&#x52A0;&#x8F7D;&#x8FDB;&#x7A0B;&#xFF09;&#x3002;&#x63A5;&#x7740;&#xFF0C;&#x5F00;&#x53D1;&#x677F;&#x5C06;&#x4F1A;&#x590D;&#x4F4D;&#xFF0C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F; &#x201C;hello_world&#x201D; &#x5F00;&#x59CB;&#x542F;&#x52A8;&#x3002;</p>
+<p>&#x6769;&#x612F;&#xE511;&#x6D60;&#x30E4;&#x7B02;&#x935B;&#x6212;&#x62A4;&#x9359;&#xE219;&#x4E92;&#x7F02;&#x682C;&#x7627;&#x6434;&#x65C2;&#x6564;&#x7ECB;&#x5B2A;&#x7C2D;&#x935C;&#x5C7E;&#x588D;&#x93C8;&#xFFFD; ESP-IDF &#x7F01;&#x52EA;&#x6B22;&#x951B;&#x5C7E;&#x5E34;&#x942B;&#x20AC;&#x9422;&#x71B8;&#x579A; bootloader&#x9286;&#x4F78;&#x578E;&#x9356;&#x9E3F;&#x3003;&#x935C;&#x5C7D;&#x7C32;&#x9422;&#x3127;&#x25BC;&#x6434;&#x5FCE;&#x7C29;&#x6769;&#x6D98;&#x57D7;&#x93C2;&#x56E6;&#x6B22;&#x9286;&#x509B;&#x5E34;&#x942B;&#x20AC;&#x951B;&#x5C83;&#x7E56;&#x6D5C;&#x6D97;&#x7C29;&#x6769;&#x6D98;&#x57D7;&#x93C2;&#x56E6;&#x6B22;&#x704F;&#x55DA;&#xE766;&#x9411;&#x443;&#x7D8D;&#x9477;&#xFFFD; ESP32 &#x5BEE;&#x20AC;&#x9359;&#x621E;&#x6F98;&#x9286;&#xFFFD;</p>
+<p>&#x6FE1;&#x509B;&#x7049;&#x6D93;&#x20AC;&#x9352;&#x56EC;&#x300E;&#x9352;&#x254B;&#x7D1D;&#x9359;&#xE21A;&#x6E6A;&#x9411;&#x443;&#x7D8D;&#x7039;&#x5C7E;&#x579A;&#x935A;&#x5EA3;&#x6E45;&#x9352;&#x626E;&#x88AB;&#x6D7C;&#x95F4;&#x7B05;&#x93C2;&#x572D;&#x6B91;&#x93B5;&#x64B3;&#x5D43;&#x6DC7;&#x2103;&#x4F05;&#x951B;&#x581C;&#x552C;&#x741B;&#x3125;&#x59DE;&#x675E;&#x501F;&#x7E58;&#x7ECB;&#x5B36;&#x7D1A;&#x9286;&#x509B;&#x5E34;&#x942B;&#x20AC;&#x951B;&#x5C7D;&#x7D11;&#x9359;&#x621E;&#x6F98;&#x704F;&#x55D5;&#x7D30;&#x6FB6;&#x5D84;&#x7D85;&#x951B;&#x5C7D;&#x7C32;&#x9422;&#x3127;&#x25BC;&#x6434;&#xFFFD; &#x9225;&#x6E09;ello_world&#x9225;&#xFFFD; &#x5BEE;&#x20AC;&#x6FEE;&#x5B2A;&#x60CE;&#x9354;&#x3123;&#x20AC;&#xFFFD;</p>
 <pre><code class="lang-shell">esptool.py v2.0-beta2
 Flashing binaries to serial port /dev/ttyUSB0 (app at offset 0x10000)...
 esptool.py v2.0-beta2
@@ -663,10 +663,10 @@ Hash of data verified.
 Leaving...
 Hard resetting...
 </code></pre>
-<p>&#x5982;&#x679C;&#x4F7F;&#x7528; Eclipse IDE&#xFF0C;&#x800C;&#x975E; <code>make</code> &#x7F16;&#x8BD1;&#x7CFB;&#x7EDF;&#xFF0C;&#x8BF7;&#x53C2;&#x8003;&#x5B98;&#x65B9; <a href="https://docs.espressif.com/projects/esp-idf/zh_CN/latest/get-started/eclipse-setup.html" target="_blank">Eclipse &#x6307;&#x5357;</a>&#x3002;</p>
-<h2 id="&#x76D1;&#x89C6;&#x5668;">&#x76D1;&#x89C6;&#x5668;</h2>
-<p>&#x4F7F;&#x7528; <code>make monitor</code> &#x547D;&#x4EE4;&#xFF0C;&#x76D1;&#x89C6; &#x201C;hello_world&#x201D; &#x7684;&#x8FD0;&#x884C;&#x60C5;&#x51B5;&#x3002;</p>
-<p>&#x8FD0;&#x884C;&#x8BE5;&#x547D;&#x4EE4;&#x540E;&#xFF0C;IDF &#x76D1;&#x89C6;&#x5668;&#x7528;&#x7A0B;&#x5E8F;&#x5C06;&#x542F;&#x52A8;&#xFF1A;</p>
+<p>&#x6FE1;&#x509B;&#x7049;&#x6D63;&#x8DE8;&#x6564; Eclipse IDE&#x951B;&#x5C83;&#x20AC;&#x5C84;&#x6F6A; <code>make</code> &#x7F02;&#x682C;&#x7627;&#x7EEF;&#x8364;&#x7CBA;&#x951B;&#x5C83;&#xE1EC;&#x9359;&#x509D;&#x20AC;&#x51A8;&#x757C;&#x93C2;&#xFFFD; <a href="https://docs.espressif.com/projects/esp-idf/zh_CN/latest/get-started/eclipse-setup.html" target="_blank">Eclipse &#x93B8;&#x56E7;&#x5D21;</a>&#x9286;&#xFFFD;</p>
+<h2 id="&#x9429;&#x6223;&#xE74B;&#x9363;&#xFFFD;">&#x9429;&#x6223;&#xE74B;&#x9363;&#xFFFD;</h2>
+<p>&#x6D63;&#x8DE8;&#x6564; <code>make monitor</code> &#x935B;&#x6212;&#x62A4;&#x951B;&#x5C80;&#x6D03;&#x7459;&#xFFFD; &#x9225;&#x6E09;ello_world&#x9225;&#xFFFD; &#x9428;&#x52EE;&#x7E4D;&#x741B;&#x5C7E;&#x510F;&#x9350;&#x70B9;&#x20AC;&#xFFFD;</p>
+<p>&#x6769;&#x612F;&#xE511;&#x7487;&#x30E5;&#x61E1;&#x6D60;&#x3085;&#x6097;&#x951B;&#x5B56;DF &#x9429;&#x6223;&#xE74B;&#x9363;&#x3127;&#x6564;&#x7ECB;&#x5B2A;&#x7C2D;&#x704F;&#x55D7;&#x60CE;&#x9354;&#xE7D2;&#x7D30;</p>
 <pre><code class="lang-shell">$ make monitor
 MONITOR
 --- idf_monitor on /dev/ttyUSB0 115200 ---
@@ -677,7 +677,7 @@ rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
 ets Jun  8 2016 00:22:57
 ...
 </code></pre>
-<p>&#x6B64;&#x65F6;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x542F;&#x52A8;&#x65E5;&#x5FD7;&#x548C;&#x8BCA;&#x65AD;&#x65E5;&#x5FD7;&#x4E4B;&#x540E;&#xFF0C;&#x770B;&#x5230;&#x6253;&#x5370;&#x7684; &#x201C;Hello world!&#x201D; &#x4E86;&#x3002;</p>
+<p>&#x59DD;&#x3086;&#x6902;&#x951B;&#x5C7D;&#x6C28;&#x9359;&#xE219;&#x4E92;&#x9366;&#x3125;&#x60CE;&#x9354;&#x3126;&#x68E9;&#x8E47;&#x6940;&#x62F0;&#x7487;&#x5A43;&#x67C7;&#x93C3;&#x30E5;&#x7E54;&#x6D94;&#x5B2A;&#x6097;&#x951B;&#x5C80;&#x6E45;&#x9352;&#x7248;&#x58A6;&#x9357;&#x626E;&#x6B91; &#x9225;&#x6DD7;ello world!&#x9225;&#xFFFD; &#x6D5C;&#x55D0;&#x20AC;&#xFFFD;</p>
 <pre><code class="lang-shell">...
 Hello world!
 Restarting in 10 seconds...
@@ -686,62 +686,62 @@ Restarting in 9 seconds...
 Restarting in 8 seconds...
 Restarting in 7 seconds...
 </code></pre>
-<p><strong>&#x4F7F;&#x7528;&#x5FEB;&#x6377;&#x952E; <code>Ctrl+]</code>&#xFF0C;&#x9000;&#x51FA; IDF &#x76D1;&#x89C6;&#x5668;&#x3002;</strong></p>
-<p>&#x5982;&#x679C; IDF &#x76D1;&#x89C6;&#x5668;&#x5728;&#x70E7;&#x5F55;&#x540E;&#x5F88;&#x5FEB;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#xFF0C;&#x6216;&#x6253;&#x5370;&#x4FE1;&#x606F;&#x5168;&#x662F;&#x4E71;&#x7801;&#xFF08;&#x89C1;&#x4E0B;&#xFF09;&#xFF0C;&#x5F88;&#x6709;&#x53EF;&#x80FD;&#x662F;&#x56E0;&#x4E3A;&#x4F60;&#x7684;&#x5F00;&#x53D1;&#x677F;&#x9009;&#x7528;&#x4E86; 26 MHz &#x6676;&#x632F;&#xFF0C;&#x800C; ESP-IDF &#x9ED8;&#x8BA4;&#x652F;&#x6301;&#x5927;&#x591A;&#x6570;&#x5F00;&#x53D1;&#x677F;&#x4F7F;&#x7528;&#x7684; 40 MHz &#x6676;&#x632F;&#x3002;</p>
-<pre><code>e&#xFFFD;&#xFFFD;&#xFFFD;)(Xn@&#xFFFD;y.!&#xFFFD;&#xFFFD;(&#xFFFD;PW+)&#xFFFD;&#xFFFD;Hn9a&#x605;/9&#xFFFD;!&#xFFFD;t5&#xFFFD;&#xFFFD;P&#xFFFD;~&#xFFFD;k&#xFFFD;&#xFFFD;e&#xFFFD;ea&#xFFFD;5&#xFFFD;jA
-~zY&#xFFFD;&#xFFFD;Y(1&#xFFFD;,1&#xFFFD;&#xFFFD; e&#xFFFD;&#xFFFD;&#xFFFD;)(Xn@&#xFFFD;y.!Dr&#xFFFD;zY(&#xFFFD;jpi&#xFFFD;|&#xFFFD;+z5Ymvp
-</code></pre><p>&#x6B64;&#x65F6;&#xFF0C;&#x6309;&#x7167;&#x5982;&#x4E0B;&#x6B65;&#x9AA4;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<p><strong>&#x6D63;&#x8DE8;&#x6564;&#x8E47;&#xE0A3;&#x5D4E;&#x95BF;&#xFFFD; <code>Ctrl+]</code>&#x951B;&#x5C84;&#x20AC;&#x20AC;&#x9351;&#xFFFD; IDF &#x9429;&#x6223;&#xE74B;&#x9363;&#x3123;&#x20AC;&#xFFFD;</strong></p>
+<p>&#x6FE1;&#x509B;&#x7049; IDF &#x9429;&#x6223;&#xE74B;&#x9363;&#x3125;&#x6E6A;&#x9411;&#x443;&#x7D8D;&#x935A;&#x5EA1;&#x7DE2;&#x8E47;&#xE0A2;&#x5F42;&#x9422;&#x71BC;&#x654A;&#x7487;&#xE224;&#x7D1D;&#x93B4;&#x6828;&#x58A6;&#x9357;&#x9881;&#x4FCA;&#x93AD;&#xE21A;&#x53CF;&#x93C4;&#xE219;&#x8D21;&#x942E;&#x4F8A;&#x7D19;&#x7459;&#x4F77;&#x7B05;&#x951B;&#x591B;&#x7D1D;&#x5BF0;&#x581F;&#x6E41;&#x9359;&#xE21D;&#x5158;&#x93C4;&#xE21A;&#x6D1C;&#x6D93;&#x8F70;&#x7D98;&#x9428;&#x52EB;&#x7D11;&#x9359;&#x621E;&#x6F98;&#x95AB;&#x590C;&#x6564;&#x6D5C;&#xFFFD; 26 MHz &#x93C5;&#x8235;&#x5C1F;&#x951B;&#x5C83;&#x20AC;&#xFFFD; ESP-IDF &#x699B;&#x6A3F;&#xE17B;&#x93C0;&#xE21B;&#x5BD4;&#x6FB6;&#x443;&#xE63F;&#x93C1;&#x677F;&#x7D11;&#x9359;&#x621E;&#x6F98;&#x6D63;&#x8DE8;&#x6564;&#x9428;&#xFFFD; 40 MHz &#x93C5;&#x8235;&#x5C1F;&#x9286;&#xFFFD;</p>
+<pre><code>e&#x951F;&#x65A4;&#x62F7;&#x951F;&#xFFFD;)(Xn@&#x951F;&#x7D71;.!&#x951F;&#x65A4;&#x62F7;(&#x951F;&#x7D47;W+)&#x951F;&#x65A4;&#x62F7;Hn9a&#x8C90;/9&#x951F;&#xFFFD;!&#x951F;&#x7D6B;5&#x951F;&#x65A4;&#x62F7;P&#x951F;&#x7D76;&#x951F;&#x7D62;&#x951F;&#x65A4;&#x62F7;e&#x951F;&#x7D5C;a&#x951F;&#xFFFD;5&#x951F;&#x7D61;A
+~zY&#x951F;&#x65A4;&#x62F7;Y(1&#x951F;&#xFFFD;,1&#x951F;&#x65A4;&#x62F7; e&#x951F;&#x65A4;&#x62F7;&#x951F;&#xFFFD;)(Xn@&#x951F;&#x7D71;.!Dr&#x951F;&#x7D72;Y(&#x951F;&#xFFFD;jpi&#x951F;&#x7D74;&#x951F;&#xFFFD;+z5Ymvp
+</code></pre><p>&#x59DD;&#x3086;&#x6902;&#x951B;&#x5C7E;&#x5BDC;&#x9413;&#x443;&#xE6E7;&#x6D93;&#x5B2B;&#xE11E;&#x6960;&#x3086;&#x6437;&#x6D63;&#x6ED0;&#x7D30;</p>
 <ol>
-<li>&#x9000;&#x51FA;&#x76D1;&#x89C6;&#x5668;&#x3002;</li>
-<li>&#x6253;&#x5F00; <a href="https://docs.espressif.com/projects/esp-idf/zh_CN/latest/get-started/index.html#get-started-configure" target="_blank">menuconfig</a>&#xFF0C;</li>
-<li>&#x8FDB;&#x5165; <code>Component config</code> &#x2013;&gt; <code>ESP32-specific</code> &#x2013;&gt; <code>Main XTAL frequency</code> &#x8FDB;&#x884C;&#x914D;&#x7F6E;&#xFF0C;&#x5C06; <a href="https://docs.espressif.com/projects/esp-idf/zh_CN/latest/api-reference/kconfig.html#config-esp32-xtal-freq-sel" target="_blank">CONFIG_ESP32_XTAL_FREQ_SEL</a> &#x8BBE;&#x7F6E;&#x4E3A; 26 MHz&#x3002;</li>
-<li>&#x7136;&#x540E;&#xFF0C;&#x8BF7;&#x91CD;&#x65B0; <a href="https://docs.espressif.com/projects/esp-idf/zh_CN/latest/get-started/index.html#get-started-build-and-flash" target="_blank">&#x7F16;&#x8BD1;&#x548C;&#x70E7;&#x5F55;</a> &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</li>
+<li>&#x95AB;&#x20AC;&#x9351;&#x8679;&#x6D03;&#x7459;&#x55D7;&#x6AD2;&#x9286;&#xFFFD;</li>
+<li>&#x93B5;&#x64B3;&#x7D11; <a href="https://docs.espressif.com/projects/esp-idf/zh_CN/latest/get-started/index.html#get-started-configure" target="_blank">menuconfig</a>&#x951B;&#xFFFD;</li>
+<li>&#x6769;&#x6D98;&#x53C6; <code>Component config</code> &#x9225;&#xFFFD;&gt; <code>ESP32-specific</code> &#x9225;&#xFFFD;&gt; <code>Main XTAL frequency</code> &#x6769;&#x6D9C;&#xE511;&#x95B0;&#x5D87;&#x7586;&#x951B;&#x5C7D;&#x76A2; <a href="https://docs.espressif.com/projects/esp-idf/zh_CN/latest/api-reference/kconfig.html#config-esp32-xtal-freq-sel" target="_blank">CONFIG_ESP32_XTAL_FREQ_SEL</a> &#x7481;&#x5267;&#x7586;&#x6D93;&#xFFFD; 26 MHz&#x9286;&#xFFFD;</li>
+<li>&#x9412;&#x8DFA;&#x6097;&#x951B;&#x5C83;&#xE1EC;&#x95B2;&#x5D86;&#x67CA; [&#x7F02;&#x682C;&#x7627;&#x935C;&#x5C80;&#x5133;&#x8930;&#x6621;(<a href="https://docs.espressif.com/projects/esp-idf/zh_CN/latest/get-started/index.html#get-started-build-and-flash" target="_blank">https://docs.espressif.com/projects/esp-idf/zh_CN/latest/get-started/index.html#get-started-build-and-flash</a>) &#x6434;&#x65C2;&#x6564;&#x7ECB;&#x5B2A;&#x7C2D;&#x9286;&#xFFFD;</li>
 </ol>
-<p>&#x6CE8;&#x89E3;</p>
-<p>&#x4E5F;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x4E00;&#x6B21;&#x6027;&#x6267;&#x884C;&#x6784;&#x5EFA;&#x3001;&#x70E7;&#x5F55;&#x548C;&#x76D1;&#x89C6;&#x8FC7;&#x7A0B;&#xFF1A;</p>
+<p>&#x5A09;&#x3128;&#x412;</p>
+<p>&#x6D94;&#x71B7;&#x5F72;&#x6D60;&#x30E8;&#x7E4D;&#x741B;&#x5C7C;&#x4E92;&#x6D93;&#x5B2A;&#x61E1;&#x6D60;&#x308F;&#x7D1D;&#x6D93;&#x20AC;&#x5A06;&#x2103;&#x20AC;&#x444;&#x58BD;&#x741B;&#x5C7E;&#x702F;&#x5BE4;&#x6052;&#x20AC;&#x4F7A;&#x5133;&#x8930;&#x66DE;&#x62F0;&#x9429;&#x6223;&#xE74B;&#x6769;&#x56E9;&#x25BC;&#x951B;&#xFFFD;</p>
 <pre><code>make flash monitor
-</code></pre><p>&#x6B64;&#x5916;&#xFF0C;&#x8BF7;&#x524D;&#x5F80; <a href="https://docs.espressif.com/projects/esp-idf/zh_CN/latest/api-guides/tools/idf-monitor.html" target="_blank">IDF &#x76D1;&#x89C6;&#x5668;</a>&#xFF0C;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x4F7F;&#x7528; IDF &#x76D1;&#x89C6;&#x5668;&#x7684;&#x5FEB;&#x6377;&#x952E;&#x548C;&#x5176;&#x4ED6;&#x8BE6;&#x60C5;&#x3002;</p>
-<h2 id="&#x73AF;&#x5883;&#x53D8;&#x91CF;">&#x73AF;&#x5883;&#x53D8;&#x91CF;</h2>
-<p>&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x5728;&#x4F7F;&#x7528; <code>make</code> &#x547D;&#x4EE4;&#x65F6; <strong>&#x76F4;&#x63A5;&#x8BBE;&#x7F6E;</strong> &#x90E8;&#x5206;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x800C;&#x65E0;&#x9700;&#x8FDB;&#x5165; <code>make menuconfig</code> &#x8FDB;&#x884C;&#x91CD;&#x65B0;&#x914D;&#x7F6E;&#x3002;&#x8FD9;&#x4E9B;&#x53D8;&#x91CF;&#x5305;&#x62EC;&#xFF1A;</p>
+</code></pre><p>&#x59DD;&#x3085;&#xE63B;&#x951B;&#x5C83;&#xE1EC;&#x9353;&#x5D85;&#x7DDA; [IDF &#x9429;&#x6223;&#xE74B;&#x9363;&#x2559;(<a href="https://docs.espressif.com/projects/esp-idf/zh_CN/latest/api-guides/tools/idf-monitor.html)&#x951B;&#x5C7C;&#x7C21;&#x7459;&#xFF46;&#x6D3F;&#x6FB6;&#x6C2B;&#x5A07;&#x9422;&#xFFFD;" target="_blank">https://docs.espressif.com/projects/esp-idf/zh_CN/latest/api-guides/tools/idf-monitor.html)&#x951B;&#x5C7C;&#x7C21;&#x7459;&#xFF46;&#x6D3F;&#x6FB6;&#x6C2B;&#x5A07;&#x9422;&#xFFFD;</a> IDF &#x9429;&#x6223;&#xE74B;&#x9363;&#x3127;&#x6B91;&#x8E47;&#xE0A3;&#x5D4E;&#x95BF;&#xE1BC;&#x62F0;&#x934F;&#x6735;&#x7CAC;&#x7487;&#xFE3D;&#x510F;&#x9286;&#xFFFD;</p>
+<h2 id="&#x941C;&#xE21A;&#xE568;&#x9359;&#x6A40;&#x567A;">&#x941C;&#xE21A;&#xE568;&#x9359;&#x6A40;&#x567A;</h2>
+<p>&#x9422;&#x3126;&#x57DB;&#x9359;&#xE219;&#x4E92;&#x9366;&#x3124;&#x5A07;&#x9422;&#xFFFD; <code>make</code> &#x935B;&#x6212;&#x62A4;&#x93C3;&#xFFFD; <strong>&#x9429;&#x5B58;&#x5E34;&#x7481;&#x5267;&#x7586;</strong> &#x95AE;&#x3125;&#x578E;&#x941C;&#xE21A;&#xE568;&#x9359;&#x6A40;&#x567A;&#x951B;&#x5C83;&#x20AC;&#x5C7E;&#x68E4;&#x95C7;&#x20AC;&#x6769;&#x6D98;&#x53C6; <code>make menuconfig</code> &#x6769;&#x6D9C;&#xE511;&#x95B2;&#x5D86;&#x67CA;&#x95B0;&#x5D87;&#x7586;&#x9286;&#x509D;&#x7E56;&#x6D5C;&#x6D98;&#x5F49;&#x95B2;&#x5FD3;&#x5BD8;&#x93B7;&#xE10A;&#x7D30;</p>
 <table>
 <thead>
 <tr>
-<th>&#x53D8;&#x91CF;</th>
-<th>&#x63CF;&#x8FF0;&#x4E0E;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;</th>
+<th>&#x9359;&#x6A40;&#x567A;</th>
+<th>&#x93BB;&#x5FDA;&#x582A;&#x6D93;&#x5E9D;&#x5A07;&#x9422;&#x3126;&#x67DF;&#x5BEE;&#xFFFD;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>ESPPORT</code></td>
-<td>&#x8986;&#x76D6; <code>flash</code> &#x548C; <code>monitor</code> &#x547D;&#x4EE4;&#x4F7F;&#x7528;&#x7684;&#x4E32;&#x53E3;&#x3002;</td>
+<td>&#x7455;&#x55D9;&#x6D0A; <code>flash</code> &#x935C;&#xFFFD; <code>monitor</code> &#x935B;&#x6212;&#x62A4;&#x6D63;&#x8DE8;&#x6564;&#x9428;&#x52EA;&#x8986;&#x9359;&#xFF43;&#x20AC;&#xFFFD;</td>
 </tr>
 <tr>
-<td>&#x4F8B;&#xFF1A;<code>make flash ESPPORT=/dev/ttyUSB1</code>, <code>make monitor ESPPORT=COM1</code></td>
+<td>&#x6E1A;&#x5B36;&#x7D30;<code>make flash ESPPORT=/dev/ttyUSB1</code>, <code>make monitor ESPPORT=COM1</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>ESPBAUD</code></td>
-<td>&#x8986;&#x76D6;&#x70E7;&#x5F55; ESP32 &#x65F6;&#x4F7F;&#x7528;&#x7684;&#x4E32;&#x53E3;&#x901F;&#x7387;&#x3002;</td>
+<td>&#x7455;&#x55D9;&#x6D0A;&#x9411;&#x443;&#x7D8D; ESP32 &#x93C3;&#x6735;&#x5A07;&#x9422;&#x3127;&#x6B91;&#x6D93;&#x63D2;&#x5F5B;&#x95AB;&#x71BA;&#x5DFC;&#x9286;&#xFFFD;</td>
 </tr>
 <tr>
-<td>&#x4F8B;&#xFF1A;<code>make flash ESPBAUD=9600</code></td>
+<td>&#x6E1A;&#x5B36;&#x7D30;<code>make flash ESPBAUD=9600</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>MONITORBAUD</code></td>
-<td>&#x8986;&#x76D6;&#x76D1;&#x63A7;&#x65F6;&#x4F7F;&#x7528;&#x7684;&#x4E32;&#x53E3;&#x901F;&#x7387;&#x3002;</td>
+<td>&#x7455;&#x55D9;&#x6D0A;&#x9429;&#x621E;&#x5E36;&#x93C3;&#x6735;&#x5A07;&#x9422;&#x3127;&#x6B91;&#x6D93;&#x63D2;&#x5F5B;&#x95AB;&#x71BA;&#x5DFC;&#x9286;&#xFFFD;</td>
 </tr>
 <tr>
-<td>&#x4F8B;&#xFF1A;<code>make monitor MONITORBAUD=9600</code></td>
+<td>&#x6E1A;&#x5B36;&#x7D30;<code>make monitor MONITORBAUD=9600</code></td>
 </tr>
 </tbody>
 </table>
-<p>&#x6CE8;&#x89E3;</p>
-<p>&#x60A8;&#x53EF;&#x5BFC;&#x51FA;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF08;&#x4F8B;&#xFF1A;<code>export ESPPORT=/dev/ttyUSB1</code>&#xFF09;&#x3002; &#x5728;&#x540C;&#x4E00;&#x4F1A;&#x8BDD;&#x7A97;&#x53E3;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x672A;&#x88AB;&#x540C;&#x6B65;&#x8986;&#x76D6;&#xFF0C;&#x6240;&#x6709; <code>make</code> &#x547D;&#x4EE4;&#x5747;&#x4F1A;&#x4F7F;&#x7528;&#x5BFC;&#x51FA;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x503C;&#x3002;</p>
-<h2 id="&#x66F4;&#x65B0;-esp-idf">&#x66F4;&#x65B0; ESP-IDF</h2>
-<p>&#x4E50;&#x946B;&#x4F1A;&#x4E0D;&#x65F6;&#x63A8;&#x51FA;&#x66F4;&#x65B0;&#x7248;&#x672C;&#x7684; ESP-IDF&#xFF0C;&#x4FEE;&#x590D; bug &#x6216;&#x63D0;&#x51FA;&#x65B0;&#x7684;&#x7279;&#x6027;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5728;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x5E94;&#x6CE8;&#x610F;&#x66F4;&#x65B0;&#x672C;&#x5730;&#x7684;&#x7248;&#x672C;&#x3002;&#x6700;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#xFF1A;&#x76F4;&#x63A5;&#x5220;&#x9664;&#x60A8;&#x672C;&#x5730;&#x7684; <code>esp-idf</code> &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x7136;&#x540E;&#x6309;&#x7167; <a href="https://docs.espressif.com/projects/esp-idf/zh_CN/latest/get-started/index.html#get-started-get-esp-idf" target="_blank">&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x83B7;&#x53D6; ESP-IDF</a> &#x4E2D;&#x7684;&#x6307;&#x793A;&#xFF0C;&#x91CD;&#x65B0;&#x5B8C;&#x6210;&#x514B;&#x9686;&#x3002;</p>
-<p>&#x5982;&#x679C;&#x5E0C;&#x671B;&#x5C06; ESP-IDF &#x514B;&#x9686;&#x5230;&#x65B0;&#x7684;&#x8DEF;&#x5F84;&#x4E0B;&#xFF0C;&#x8BF7;&#x52A1;&#x5FC5; <a href="https://docs.espressif.com/projects/esp-idf/zh_CN/latest/get-started/add-idf_path-to-profile.html" target="_blank">&#x91CD;&#x65B0;&#x8BBE;&#x7F6E; IDF_PATH</a>&#x3002;&#x5426;&#x5219;&#xFF0C;&#x5DE5;&#x5177;&#x94FE;&#x5C06;&#x65E0;&#x6CD5;&#x627E;&#x5230; ESP-IDF&#x3002;</p>
-<p>&#x6B64;&#x5916;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4EC5;&#x66F4;&#x65B0;&#x53D8;&#x66F4;&#x90E8;&#x5206;&#x3002;&#x5177;&#x4F53;&#x65B9;&#x5F0F;&#xFF0C;&#x8BF7;&#x524D;&#x5F80; <a href="https://docs.espressif.com/projects/esp-idf/zh_CN/latest/versions.html#updating" target="_blank">&#x66F4;&#x65B0;</a> &#x7AE0;&#x8282;&#x67E5;&#x770B;&#x3002;</p>
+<p>&#x5A09;&#x3128;&#x412;</p>
+<p>&#x93AE;&#x3125;&#x5F72;&#x7035;&#x714E;&#x56AD;&#x941C;&#xE21A;&#xE568;&#x9359;&#x6A40;&#x567A;&#x951B;&#x581C;&#x7DE5;&#x951B;&#x6B5A;export ESPPORT=/dev/ttyUSB1<code>&#x951B;&#x5908;&#x20AC;&#xFFFD; &#x9366;&#x3125;&#x6093;&#x6D93;&#x20AC;&#x6D7C;&#x6C33;&#x763D;&#x7ED0;&#x6940;&#x5F5B;&#x6D93;&#xE168;&#x7D1D;&#x6FE1;&#x509B;&#x7049;&#x93C8;&#xE047;&#xE766;&#x935A;&#x5C7E;&#xE11E;&#x7455;&#x55D9;&#x6D0A;&#x951B;&#x5C7E;&#x588D;&#x93C8;&#xFFFD;</code>make` &#x935B;&#x6212;&#x62A4;&#x9367;&#x56E6;&#x7D30;&#x6D63;&#x8DE8;&#x6564;&#x7035;&#x714E;&#x56AD;&#x9428;&#x52ED;&#x5E46;&#x6FA7;&#x51A8;&#x5F49;&#x95B2;&#x5FD3;&#x20AC;&#x7B3A;&#x20AC;&#xFFFD;</p>
+<h2 id="&#x93C7;&#x5B58;&#x67CA;-esp-idf">&#x93C7;&#x5B58;&#x67CA; ESP-IDF</h2>
+<p>&#x6D94;&#x6130;&#x61CC;&#x6D7C;&#x6C2B;&#x7B09;&#x93C3;&#x8235;&#x5E39;&#x9351;&#x70D8;&#x6D3F;&#x93C2;&#x626E;&#x5897;&#x93C8;&#xE102;&#x6B91; ESP-IDF&#x951B;&#x5C7C;&#x6168;&#x6FB6;&#xFFFD; bug &#x93B4;&#x6828;&#x5F41;&#x9351;&#x70D8;&#x67CA;&#x9428;&#x52ED;&#x58D2;&#x93AC;&#x441;&#x20AC;&#x509A;&#x6D1C;&#x59DD;&#x308F;&#x7D1D;&#x9366;&#x3124;&#x5A07;&#x9422;&#x3126;&#x6902;&#x951B;&#x5C7D;&#x7C32;&#x5A09;&#x3126;&#x5270;&#x93C7;&#x5B58;&#x67CA;&#x93C8;&#xE100;&#x6E74;&#x9428;&#x52ED;&#x5897;&#x93C8;&#xE0FE;&#x20AC;&#x509B;&#x6E36;&#x7EE0;&#x20AC;&#x9357;&#x66E0;&#x6B91;&#x93C2;&#x89C4;&#x7876;&#x93C4;&#xE224;&#x7D30;&#x9429;&#x5B58;&#x5E34;&#x9352;&#x72BB;&#x6ACE;&#x93AE;&#x3126;&#x6E70;&#x9366;&#x626E;&#x6B91; <code>esp-idf</code> &#x93C2;&#x56E6;&#x6B22;&#x6FB6;&#x7678;&#x7D1D;&#x9412;&#x8DFA;&#x6097;&#x93B8;&#x590C;&#x53CE; <a href="https://docs.espressif.com/projects/esp-idf/zh_CN/latest/get-started/index.html#get-started-get-esp-idf" target="_blank">&#x7ED7;&#xE0FF;&#x7C29;&#x59DD;&#x30EF;&#x7D30;&#x947E;&#x5CF0;&#x5F47; ESP-IDF</a> &#x6D93;&#xE160;&#x6B91;&#x93B8;&#x56E9;&#x305A;&#x951B;&#x5C84;&#x5678;&#x93C2;&#x677F;&#x756C;&#x93B4;&#x612C;&#x53A0;&#x95C5;&#x55D0;&#x20AC;&#xFFFD;</p>
+<p>&#x6FE1;&#x509B;&#x7049;&#x752F;&#x5C7E;&#x6E5C;&#x704F;&#xFFFD; ESP-IDF &#x934F;&#x5B2E;&#x6B95;&#x9352;&#x7248;&#x67CA;&#x9428;&#x52EE;&#x77FE;&#x5BF0;&#x52EA;&#x7B05;&#x951B;&#x5C83;&#xE1EC;&#x9354;&#x2033;&#x7E40; <a href="https://docs.espressif.com/projects/esp-idf/zh_CN/latest/get-started/add-idf_path-to-profile.html" target="_blank">&#x95B2;&#x5D86;&#x67CA;&#x7481;&#x5267;&#x7586; IDF_PATH</a>&#x9286;&#x509A;&#x60C1;&#x9352;&#x6B19;&#x7D1D;&#x5BB8;&#x30E5;&#x53FF;&#x95BE;&#x60E7;&#x76A2;&#x93C3;&#x72B3;&#x7876;&#x93B5;&#x60E7;&#x57CC; ESP-IDF&#x9286;&#xFFFD;</p>
+<p>&#x59DD;&#x3085;&#xE63B;&#x951B;&#x5C7E;&#x504D;&#x9359;&#xE219;&#x4E92;&#x6D60;&#x546E;&#x6D3F;&#x93C2;&#x677F;&#x5F49;&#x93C7;&#x64AE;&#x5134;&#x9352;&#x55D0;&#x20AC;&#x509A;&#x53FF;&#x6D63;&#x64B4;&#x67DF;&#x5BEE;&#x5FE5;&#x7D1D;&#x7487;&#x5CF0;&#x58A0;&#x5BF0;&#x20AC; <a href="https://docs.espressif.com/projects/esp-idf/zh_CN/latest/versions.html#updating" target="_blank">&#x93C7;&#x5B58;&#x67CA;</a> &#x7ED4;&#x72BA;&#x59AD;&#x93CC;&#x30E7;&#x6E45;&#x9286;&#xFFFD;</p>
 
                                 
                                 </section>
@@ -785,7 +785,7 @@ Restarting in 7 seconds...
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"esp-idf开发基本过程","level":"1.15","depth":1,"next":{"title":"VS Code 下使用 PlatformIO 进行IOT应用程序的开发","level":"1.16","depth":1,"path":"esp32_dev_with_vscode_platformio.md","ref":"esp32_dev_with_vscode_platformio.md","articles":[]},"previous":{"title":"MQTT-与自建MQTT SERVER交互","level":"1.14","depth":1,"path":"mqtt_interaction_with_Mosquitto.md","ref":"mqtt_interaction_with_Mosquitto.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"esp32_idf_dev_basic.md","mtime":"2020-04-15T05:12:29.973Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-05-26T07:31:36.677Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"esp-idf开发基本过程","level":"1.15","depth":1,"next":{"title":"VS Code 下使用 PlatformIO 进行IOT应用程序的开发","level":"1.16","depth":1,"path":"esp32_dev_with_vscode_platformio.md","ref":"esp32_dev_with_vscode_platformio.md","articles":[]},"previous":{"title":"MQTT-与自建MQTT SERVER交互","level":"1.14","depth":1,"path":"mqtt_interaction_with_Mosquitto.md","ref":"mqtt_interaction_with_Mosquitto.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"esp32_idf_dev_basic.md","mtime":"2020-05-28T01:57:56.655Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-05-28T01:56:11.561Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

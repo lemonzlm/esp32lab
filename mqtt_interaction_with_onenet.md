@@ -53,6 +53,40 @@ OneNET是**中国移动**提供的开放式IOT PaaS服务。即在物联网应�
 
 添加设备是，设备的**鉴权信息**请最好使用设备标识号，对于ESP32，可以考虑使用出厂MAC地址，需要去掉地址中的冒号`:` 。
 
+`获取MAC地址的方法`
+
+```shell
+# linux
+esptool.py --chip esp32 --port /dev/ttyUSB0 read_mac
+# mac osx
+esptool.py --chip esp32 --port /dev/cu.SLAB_USBtoUART read_mac
+
+```
+
+`可得到类似如下的信息：`
+
+```shell
+esptool.py v2.8
+Serial port /dev/cu.SLAB_USBtoUART
+Connecting........_____....._____....._____.
+Chip is ESP32D0WDQ6 (revision 1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 3c:71:bf:c8:00:54
+Uploading stub...
+Running stub...
+Stub running...
+MAC: 3c:71:bf:c8:00:54
+Hard resetting via RTS pin...
+```
+
+`依据以上结果，其中`
+
+|          |                   |
+| -------- | ----------------- |
+| MAC      | 3c:71:bf:c8:00:54 |
+| 鉴权信息 | 3c71bfc80054      |
+
 请记录下**设备ID** , 以备程序调用。
 
 ## 接入OneNET并实现远程控制

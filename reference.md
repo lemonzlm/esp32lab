@@ -7,4 +7,5 @@
 - [rshell操作指南](ref/rshell_usage.md)
 - [mpfshell操作指南](ref/mpfshell_usage.md)
 - [MQTT简介](ref/mqtt_introduction.md)
+- [PlatformIO基础概念以及对ESP32的支持](ref/platformio_introduction.md)
 

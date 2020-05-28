@@ -587,6 +587,45 @@
 <h3 id="&#x6DFB;&#x52A0;&#x8BBE;&#x5907;">&#x6DFB;&#x52A0;&#x8BBE;&#x5907;</h3>
 <p>&#x8BE6;&#x7EC6;&#x6307;&#x5BFC;&#x8BF7;&#x53C2;&#x89C1;&#x5B98;&#x65B9;&#x6587;&#x6863;&#xFF0C;<a href="https://open.iot.10086.cn/doc/book/easy-manual/product&amp;device/device-create/single-device.html" target="_blank">&#x521B;&#x5EFA;&#x5355;&#x4E2A;&#x8BBE;&#x5907;</a></p>
 <p>&#x6DFB;&#x52A0;&#x8BBE;&#x5907;&#x662F;&#xFF0C;&#x8BBE;&#x5907;&#x7684;<strong>&#x9274;&#x6743;&#x4FE1;&#x606F;</strong>&#x8BF7;&#x6700;&#x597D;&#x4F7F;&#x7528;&#x8BBE;&#x5907;&#x6807;&#x8BC6;&#x53F7;&#xFF0C;&#x5BF9;&#x4E8E;ESP32&#xFF0C;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x4F7F;&#x7528;&#x51FA;&#x5382;MAC&#x5730;&#x5740;&#xFF0C;&#x9700;&#x8981;&#x53BB;&#x6389;&#x5730;&#x5740;&#x4E2D;&#x7684;&#x5192;&#x53F7;<code>:</code> &#x3002;</p>
+<p><code>&#x83B7;&#x53D6;MAC&#x5730;&#x5740;&#x7684;&#x65B9;&#x6CD5;</code></p>
+<pre><code class="lang-shell"># linux
+esptool.py --chip esp32 --port /dev/ttyUSB0 read_mac
+# mac osx
+esptool.py --chip esp32 --port /dev/cu.SLAB_USBtoUART read_mac
+</code></pre>
+<p><code>&#x53EF;&#x5F97;&#x5230;&#x7C7B;&#x4F3C;&#x5982;&#x4E0B;&#x7684;&#x4FE1;&#x606F;&#xFF1A;</code></p>
+<pre><code class="lang-shell">esptool.py v2.8
+Serial port /dev/cu.SLAB_USBtoUART
+Connecting........_____....._____....._____.
+Chip is ESP32D0WDQ6 (revision 1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 3c:71:bf:c8:00:54
+Uploading stub...
+Running stub...
+Stub running...
+MAC: 3c:71:bf:c8:00:54
+Hard resetting via RTS pin...
+</code></pre>
+<p><code>&#x4F9D;&#x636E;&#x4EE5;&#x4E0A;&#x7ED3;&#x679C;&#xFF0C;&#x5176;&#x4E2D;</code></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MAC</td>
+<td>3c:71:bf:c8:00:54</td>
+</tr>
+<tr>
+<td>&#x9274;&#x6743;&#x4FE1;&#x606F;</td>
+<td>3c71bfc80054</td>
+</tr>
+</tbody>
+</table>
 <p>&#x8BF7;&#x8BB0;&#x5F55;&#x4E0B;<strong>&#x8BBE;&#x5907;ID</strong> , &#x4EE5;&#x5907;&#x7A0B;&#x5E8F;&#x8C03;&#x7528;&#x3002;</p>
 <h2 id="&#x63A5;&#x5165;onenet&#x5E76;&#x5B9E;&#x73B0;&#x8FDC;&#x7A0B;&#x63A7;&#x5236;">&#x63A5;&#x5165;OneNET&#x5E76;&#x5B9E;&#x73B0;&#x8FDC;&#x7A0B;&#x63A7;&#x5236;</h2>
 <h3 id="&#x63A5;&#x5165;wifi&#x7F51;&#x7EDC;">&#x63A5;&#x5165;WIFI&#x7F51;&#x7EDC;</h3>
@@ -753,7 +792,7 @@ state = <span class="hljs-number">0</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"MQTT-与oneNET平台交互","level":"1.13","depth":1,"next":{"title":"MQTT-与自建MQTT SERVER交互","level":"1.14","depth":1,"path":"mqtt_interaction_with_Mosquitto.md","ref":"mqtt_interaction_with_Mosquitto.md","articles":[]},"previous":{"title":"检测DHT传感器数据并通过socket上传","level":"1.12","depth":1,"path":"upload_dht11_data_via_socket.md","ref":"upload_dht11_data_via_socket.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mqtt_interaction_with_onenet.md","mtime":"2020-04-15T05:12:30.014Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-05-26T07:31:36.677Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"MQTT-与oneNET平台交互","level":"1.13","depth":1,"next":{"title":"MQTT-与自建MQTT SERVER交互","level":"1.14","depth":1,"path":"mqtt_interaction_with_Mosquitto.md","ref":"mqtt_interaction_with_Mosquitto.md","articles":[]},"previous":{"title":"检测DHT传感器数据并通过socket上传","level":"1.12","depth":1,"path":"upload_dht11_data_via_socket.md","ref":"upload_dht11_data_via_socket.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mqtt_interaction_with_onenet.md","mtime":"2020-05-28T01:55:32.909Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-05-28T01:56:11.561Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
