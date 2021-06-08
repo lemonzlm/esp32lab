@@ -44,6 +44,9 @@
 		],
 		"files.associations": {
 			".mpyproject.json": "jsonc"
-		}
+		},
+		"python.analysis.extraPaths": [
+			"/Users/lemon/.vscode/extensions/rt-thread.rt-thread-micropython-1.0.7/microExamples/code-completion"
+		]
 	}
 }
