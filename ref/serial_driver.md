@@ -1,6 +1,6 @@
-# 安装UART-MINIUSB驱动
+# 安装 UART-MINIUSB 驱动
 
-在开发版上，有一片ch220芯片，用于将ttl的串行接口转换为miniUSB，因此必须在主机安装该驱动程序。
+在开发版上，有一片 ch220 芯片，用于将 ttl 的串行接口转换为 miniUSB，因此必须在主机安装该驱动程序。
 
 Usb-2-ttl chip ch210x driver:
 
@@ -8,19 +8,19 @@ Usb-2-ttl chip ch210x driver:
 
 ## linux 下的驱动安装
 
-linux 下需要知道你系统的Linux内核版本，然后选择相应的版本下载，版本查询命令：
+linux 下需要知道你系统的 Linux 内核版本，然后选择相应的版本下载，版本查询命令：
 
 ```shell
 uname -a
 ```
 
-下载驱动后，解压后，进入文件夹，认真阅读安装指南CP210x_VCP_Linux_4.x_Release_Notes.txt。
+下载驱动后，解压后，进入文件夹，认真阅读安装指南 CP210x_VCP_Linux_4.x_Release_Notes.txt。
 
-Ubuntu 下的安装指南(本例中，版本为LInux4.x)
+Ubuntu 下的安装指南(本例中，版本为 LInux4.x)
 
 ```shell
 make ( your cp210x driver )
-cp cp210x.ko to /lib/modules/$(uname -r)/kernel/drivers/usb/serial
+cp cp210x.ko /lib/modules/$(uname -r)/kernel/drivers/usb/serial
 insmod /lib/modules/$(uname -r)/kernel/drivers/usb/serial/usbserial.ko
 insmod cp210x.ko
 ```
@@ -31,9 +31,9 @@ insmod cp210x.ko
 
 ## 检查串口驱动是否安装成功
 
-将开发版通过USB串口数据线与电脑连接，对于Windows，请自行网上搜索如何获取设备的串口号，即com端口号。
+将开发版通过 USB 串口数据线与电脑连接，对于 Windows，请自行网上搜索如何获取设备的串口号，即 com 端口号。
 
-对于Linux
+对于 Linux
 
 ```shell
 # 运行如下命令
@@ -41,7 +41,7 @@ ls /dev/ttyUSB*
 # 如果运行结果中有 /dev/ttyUSB0之类的则表明成功，且该端口号就是开发版串口的端口号。
 ```
 
-对于Mac osx
+对于 Mac osx
 
 ```shell
 # 运行如下命令
@@ -53,7 +53,7 @@ ls /dev/cu.*
 
 ## linux
 
-linux下的串口监控程序可以选择使用minicom或者picocom
+linux 下的串口监控程序可以选择使用 minicom 或者 picocom
 
 ```shell
 # 1 安装minicom
@@ -62,13 +62,13 @@ sudo apt-get install minicom
 sudo apt-get install picocom
 ```
 
-## windows 
+## windows
 
-windows的串口监控程序使用putty，请自行在网上下载并安装。
+windows 的串口监控程序使用 putty，请自行在网上下载并安装。
 
 ## Mac osx
 
-linux下的串口监控程序可以选择使用minicom或者picocom
+linux 下的串口监控程序可以选择使用 minicom 或者 picocom
 
 ```shell
 # 1 mac osx 下安装软件需要使用home brew 软件安装管理器，如果你的机器没有安装请按照如下指令安装，如果已经安装，掠过此步骤。
@@ -83,7 +83,7 @@ brew install picocom
 
 ## picocom
 
-获取picocom的使用帮助
+获取 picocom 的使用帮助
 
 ```shell
 picocom --help
@@ -100,7 +100,7 @@ picocom -b 115200 /dev/cu.SLAB_USBtoUART
 
 ## minicom
 
-获取minicom的使用帮助
+获取 minicom 的使用帮助
 
 ```shell
 minicom --help
@@ -115,4 +115,4 @@ minicom --device /dev/ttyUSB0
 minicom --device /dev/cu.SLAB_USBtoUART
 ```
 
-请注意minicom的使用，该软件在串口调试时会经常用到
+请注意 minicom 的使用，该软件在串口调试时会经常用到
