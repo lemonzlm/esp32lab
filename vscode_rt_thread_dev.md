@@ -1,4 +1,4 @@
-# **VS Code下使用RT-Thread Extension 开发项目**
+# **VS Code 下使用 RT-Thread Extension 开发项目**
 
 ## 介绍
 
@@ -17,16 +17,16 @@ VSCode 最好用的 MicroPython 插件，为 MicroPython 开发提供了强大�
 
 ## 开发板支持列表
 
-| 编号 | 开发板名称                                                   | 固件获取方式                                                 |
-| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 1    | [潘多拉 IoT Board 物联网开发板 STM32L475](https://item.taobao.com/item.htm?spm=a1z10.5-c-s.w4002-18400369818.12.2ba47ea5PzJxZx&id=583843059625) | [RT-Thread 论坛固件汇总贴](https://www.rt-thread.org/qa/forum.php?mod=viewthread&tid=12305&page=1&extra=#pid52954) |
-| 2    | [正点原子 W601 WIFI 物联网开发板](https://item.taobao.com/item.htm?spm=a230r.1.14.13.7c5b4a9bS2LYUD&id=602233847745&ns=1&abbucket=17#detail) | [RT-Thread 论坛固件汇总贴 ](https://www.rt-thread.org/qa/forum.php?mod=viewthread&tid=12305&page=1&extra=#pid52954) |
-| 3    | [正点原子探索者 STM32F407 开发板](https://item.taobao.com/item.htm?spm=a1z10.5-c-s.w4002-18400369818.18.569779dc0A3gkT&id=41855882779) | [RT-Thread 论坛固件汇总贴](https://www.rt-thread.org/qa/forum.php?mod=viewthread&tid=12305&page=1&extra=#pid52954) |
-| 4    | [RT-Thread 麻雀一号音视频开发板](https://item.taobao.com/item.htm?spm=a1z0k.7385961.1997985097.d4918997.42d74829w5rUfo&id=606684373403&_u=t2dmg8j26111) | [RT-Thread 论坛固件汇总贴](https://www.rt-thread.org/qa/forum.php?mod=viewthread&tid=12305&page=1&extra=#pid52954) |
-| 5    | [ESP8266](http://docs.micropython.org/en/latest/esp8266/quickref.html) | [官方下载链接](https://micropython.org/download#esp8266)     |
-| 6    | [ESP32](http://docs.micropython.org/en/latest/esp32/quickref.html) | [官方下载链接](https://micropython.org/download#esp32)       |
-| 7    | [PYboard](http://docs.micropython.org/en/latest/pyboard/quickref.html) | [官方下载链接](https://micropython.org/download#pyboard)     |
-| 8    | [others](https://micropython.org/download#other)             | [官方下载链接](https://micropython.org/download#other)       |
+| 编号 | 开发板名称                                                                                                                                              | 固件获取方式                                                                                                        |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| 1    | [潘多拉 IoT Board 物联网开发板 STM32L475](https://item.taobao.com/item.htm?spm=a1z10.5-c-s.w4002-18400369818.12.2ba47ea5PzJxZx&id=583843059625)         | [RT-Thread 论坛固件汇总贴](https://www.rt-thread.org/qa/forum.php?mod=viewthread&tid=12305&page=1&extra=#pid52954)  |
+| 2    | [正点原子 W601 WIFI 物联网开发板](https://item.taobao.com/item.htm?spm=a230r.1.14.13.7c5b4a9bS2LYUD&id=602233847745&ns=1&abbucket=17#detail)            | [RT-Thread 论坛固件汇总贴 ](https://www.rt-thread.org/qa/forum.php?mod=viewthread&tid=12305&page=1&extra=#pid52954) |
+| 3    | [正点原子探索者 STM32F407 开发板](https://item.taobao.com/item.htm?spm=a1z10.5-c-s.w4002-18400369818.18.569779dc0A3gkT&id=41855882779)                  | [RT-Thread 论坛固件汇总贴](https://www.rt-thread.org/qa/forum.php?mod=viewthread&tid=12305&page=1&extra=#pid52954)  |
+| 4    | [RT-Thread 麻雀一号音视频开发板](https://item.taobao.com/item.htm?spm=a1z0k.7385961.1997985097.d4918997.42d74829w5rUfo&id=606684373403&_u=t2dmg8j26111) | [RT-Thread 论坛固件汇总贴](https://www.rt-thread.org/qa/forum.php?mod=viewthread&tid=12305&page=1&extra=#pid52954)  |
+| 5    | [ESP8266](http://docs.micropython.org/en/latest/esp8266/quickref.html)                                                                                  | [官方下载链接](https://micropython.org/download#esp8266)                                                            |
+| 6    | [ESP32](http://docs.micropython.org/en/latest/esp32/quickref.html)                                                                                      | [官方下载链接](https://micropython.org/download#esp32)                                                              |
+| 7    | [PYboard](http://docs.micropython.org/en/latest/pyboard/quickref.html)                                                                                  | [官方下载链接](https://micropython.org/download#pyboard)                                                            |
+| 8    | [others](https://micropython.org/download#other)                                                                                                        | [官方下载链接](https://micropython.org/download#other)                                                              |
 
 编号为 1 - 4 的开发板的固件由 RT-Thread 官方提供，同时针对 MicroPython 插件开发环境进行 **深度优化** ，提供强大的工程同步功能以及更加丰富的固件功能。
 
@@ -79,8 +79,6 @@ MicroPython 开发的第一步是创建 MicroPython 工程，后续所有操作�
 #### Weather Show Demo 在开发板上的运行效果
 
 ![05_demo_express](https://oss-club.rt-thread.org/uploads/20210508/01314f6e06c1e8cfa44b9911442aacaa.png)
-
-
 
 ### 连接开发板
 
@@ -145,4 +143,3 @@ MicroPython 插件提供丰富的示例代码，可在左侧活动栏中查看�
 ## 注意事项
 
 - 不要删除工程目录下的 `.mpyproject.json` 文件，该文件是 MicroPython 工程的配置文件，删除后将无法正常运行 MicroPython 代码程序。
-
