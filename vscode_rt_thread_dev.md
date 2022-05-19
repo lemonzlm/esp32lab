@@ -1,5 +1,7 @@
 # **VS Code 下使用 RT-Thread Extension 开发项目**
 
+**本实验为选做，在实际使用中，推荐使用该方法作为代码编写工具，烧录和调试建议使用rshell。**
+
 ## 介绍
 
 VSCode 最好用的 MicroPython 插件，为 MicroPython 开发提供了强大的开发环境，主要特性如下：
